@@ -1,0 +1,49 @@
+﻿<Window x:Class="Rooted.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rooted"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1366" Width="768">
+    <Border Padding="10">
+
+        <StackPanel>
+
+
+            <Grid>
+
+
+            <Image x:Name="Hazel_s_png" Height="200" Margin="0,0,0,0" Source="Hazel's.png"/>
+
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+
+                <Button Margin="10 0 0 0" Grid.Column="0" Content="Home"/>
+                <Button Margin="10 0 10 0" Grid.Column="1" Content="Order Entry" Click="OrderEntryClick"/>
+                <Button Margin="0 0 10 0" Grid.Column="2" Content="Sales Quote"/>
+                <Button Margin="0 0 10 0" Grid.Column="3" Content="Exit"/>
+
+            </Grid>
+
+
+
+
+
+
+        </StackPanel>
+
+
+
+    </Border>
+
+</Window>
