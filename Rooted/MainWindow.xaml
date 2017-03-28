@@ -14,7 +14,7 @@
             <Grid>
 
 
-            <Image x:Name="Hazel_s_png" Height="200" Margin="0,0,0,0" Source="Hazel's.png"/>
+            <Image x:Name="Hazel_s_png" Height="300" Margin="0,0,0,0" Source="Hazel's.png"/>
 
             </Grid>
 
