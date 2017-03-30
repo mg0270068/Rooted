@@ -7,8 +7,12 @@
       mc:Ignorable="d" 
       d:DesignHeight="1000" d:DesignWidth="1366"
       Title="SalesQuote">
-
-    <Grid Background="#eee">
-        <TextBlock Text="Enter Sales Quote" FontSize="25"/>
-    </Grid>
+    <StackPanel Background="#eee">
+        
+        <Grid Background="#eee">
+            <TextBlock Text="Enter Sales Quote" FontSize="25"/>
+        </Grid>
+        <TextBox FontSize="20"/>
+    
+    </StackPanel>
 </Page>

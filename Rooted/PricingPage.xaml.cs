@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace Rooted
 {
     /// <summary>
-    /// Interaction logic for OrderEntry.xaml
+    /// Interaction logic for PricingPage.xaml
     /// </summary>
-    public partial class OrderEntry : Page
+    public partial class PricingPage : Page
     {
-        public OrderEntry()
+        public PricingPage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-            Main.Content = new PricingPage();
-           
-          
         }
     }
 }

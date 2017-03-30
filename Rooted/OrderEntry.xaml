@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Rooted"
       mc:Ignorable="d" 
-      d:DesignHeight="1000" d:DesignWidth="1366"
+      d:DesignHeight="1000" d:DesignWidth="1800"
       Title="OrderEntry">
 
 	<StackPanel Background="#eee">
@@ -58,7 +58,11 @@
             </CheckBox>
         </Grid>
         
-        <Button Width="150" Content="Next" FontSize="25" Margin="1500 300 0 0"/>
+        <Button Width="150" Content="Next" FontSize="25" Margin="1500 300 0 0" Click="Button_Click"/>
+
+
+
+        <Frame x:Name ="Main" Content="" Height="995" NavigationUIVisibility="Hidden"/>
 
     </StackPanel>
 
