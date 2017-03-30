@@ -40,5 +40,10 @@ namespace Rooted
         {
             Main.Content = new SalesQuote();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
