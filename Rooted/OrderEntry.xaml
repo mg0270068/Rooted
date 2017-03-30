@@ -5,39 +5,51 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Rooted"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="1000" d:DesignWidth="1366"
       Title="OrderEntry">
 
 	<StackPanel Background="#eee">
 
 		<Grid>
-		<TextBlock Text="Enter Customer Order Information" Margin="0 30 0 0" FontSize="30"/>
+			<TextBlock Text="Enter Customer Order Information" Margin="0 30 0 0" FontSize="30"/>
 		</Grid>
-		
-		
-		<Grid>
-			
+
+
+		<Grid Margin="0 0 0 50">
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="342*"/>
+				<ColumnDefinition Width="261*"/>
+				<ColumnDefinition Width="80*"/>
+				<ColumnDefinition Width="342*"/>
+				<ColumnDefinition Width="341*"/>
+			</Grid.ColumnDefinitions>
+
+			<TextBlock Margin="10,30,251,0" Text="First Name" Grid.Column="0" FontSize="20" Grid.ColumnSpan="2"/>
+			<TextBox Margin="122,30,141,0" Grid.ColumnSpan="2"/>
+			<TextBlock Margin="234,30,0,0" Text="Last Name" Grid.Column="1" FontSize="20" RenderTransformOrigin="1.164,0.519" Grid.ColumnSpan="2"/>
+			<TextBox Margin="35,30,214,0" Grid.Column="3" Grid.ColumnSpan="2"/>
+		</Grid>
+
+		<TextBlock Text="Enter Customer Street Address:" FontSize="20"/>
+		<TextBox Margin="0 0 0 0" Height="28"/>
+
+
+		<Grid Margin="0 50 0 0">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
-			
-		<TextBlock Margin="0 30 0 0" Text="First Name" Grid.Column="0" FontSize="20"/>
-		<TextBox Margin="0 30 0 0" Grid.Column="1"/>
-		<TextBlock Margin="0 30 0 0" Text="Last Name" Grid.Column="2" FontSize="20"/>
-		<TextBox Margin="0 30 0 0" Grid.Column="3"/>
-		</Grid>
-		
-		
-		<TextBlock Text="Enter Customer Street Address:" FontSize="20"/>
-			<TextBox Margin="0 0 1500 0" />
-		<TextBlock Text="City" FontSize="20"/>
-		<TextBox/>
-		<TextBlock Text="State" FontSize="20"/>
-		<TextBox/>
 
+
+
+			<TextBlock Text="City" FontSize="20" Grid.Column="0"/>
+			<TextBox Margin="54,0,92,0"/>
+			<TextBlock Text="State" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="96,0,245,0"/>
+			<TextBox Grid.Column="1" Margin="167,0,0,0"/>
+		</Grid>
 
 
 
