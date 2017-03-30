@@ -9,7 +9,7 @@
     <Border Padding="10">
 
         <StackPanel>
-
+		
 
             <Grid>
 
@@ -25,22 +25,25 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
 
-                </Grid.ColumnDefinitions>
+				</Grid.ColumnDefinitions>
 
 
-                <Button Margin="10 0 0 0" Grid.Column="0" Content="Home"/>
+                <Button Margin="10 0 0 0" Grid.Column="0" Content="Home" Click="Button_Click"/>
                 <Button Margin="10 0 10 0" Grid.Column="1" Content="Order Entry" Click="OrderEntryClick"/>
                 <Button Margin="0 0 10 0" Grid.Column="2" Content="Sales Quote"/>
                 <Button Margin="0 0 10 0" Grid.Column="3" Content="Exit"/>
 
             </Grid>
+			
+	
+			<Frame x:Name ="Main" Content="" Height="995" NavigationUIVisibility="Hidden"/>
+			
 
 
 
 
 
-
-        </StackPanel>
+		</StackPanel>
 
 
 
