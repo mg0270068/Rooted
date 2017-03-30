@@ -26,13 +26,13 @@
 			</Grid.ColumnDefinitions>
 
 			<TextBlock Margin="10,30,251,0" Text="First Name" Grid.Column="0" FontSize="20" Grid.ColumnSpan="2"/>
-			<TextBox Margin="122,30,141,0" Grid.ColumnSpan="2"/>
+            <TextBox Margin="122,30,141,0" Grid.ColumnSpan="2" FontSize="20"/>
 			<TextBlock Margin="234,30,0,0" Text="Last Name" Grid.Column="1" FontSize="20" RenderTransformOrigin="1.164,0.519" Grid.ColumnSpan="2"/>
-			<TextBox Margin="35,30,214,0" Grid.Column="3" Grid.ColumnSpan="2"/>
+            <TextBox Margin="35,30,214,0" Grid.Column="3" Grid.ColumnSpan="2" FontSize="20"/>
 		</Grid>
 
 		<TextBlock Text="Enter Customer Street Address:" FontSize="20"/>
-		<TextBox Margin="0 0 0 0" Height="28"/>
+        <TextBox Margin="0 0 0 0" Height="28" FontSize="20"/>
 
 
 		<Grid Margin="0 50 0 0">
@@ -47,9 +47,9 @@
 
 
 			<TextBlock Text="City" FontSize="20" Grid.Column="0"/>
-			<TextBox Margin="54,0,92,0"/>
+			<TextBox Margin="54,0,92,0" FontSize="20"/>
 			<TextBlock Text="State" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="96,0,245,0"/>
-			<TextBox Grid.Column="2" Margin="167,0,0,0"/>
+            <TextBox Grid.Column="2" Margin="167,0,0,0" FontSize="20"/>
            
             <CheckBox Margin="80 0 0 0" Grid.Column="3" Content="Deceased" FontSize="10">
                 <CheckBox.LayoutTransform>
