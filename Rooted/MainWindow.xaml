@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Rooted"
         mc:Ignorable="d"
         Title="MainWindow" Height="1366" Width="768">
+	
     <Border Padding="10">
 
         <StackPanel>
@@ -28,14 +29,15 @@
 				</Grid.ColumnDefinitions>
 
 
-                <Button Margin="10 0 0 0" Grid.Column="0" Content="Home" Click="Button_Click"/>
-                <Button Margin="10 0 10 0" Grid.Column="1" Content="Order Entry" Click="OrderEntryClick"/>
-                <Button Margin="0 0 10 0" Grid.Column="2" Content="Sales Quote"/>
-                <Button Margin="0 0 10 0" Grid.Column="3" Content="Exit"/>
+                <Button Margin="10 0 0 0" Grid.Column="0" Content="Home" Click="Button_Click" FontSize="30"/>
+				<Button Margin="10 0 10 0" Grid.Column="1" Content="Order Entry" Click="OrderEntryClick" FontSize="30"/>
+				<Button Margin="0 0 10 0" Grid.Column="2" Content="Sales Quote" FontSize="30"/>
+				<Button Margin="0 0 10 0" Grid.Column="3" Content="Exit" FontSize="30"/>
 
             </Grid>
 			
-	
+
+
 			<Frame x:Name ="Main" Content="" Height="995" NavigationUIVisibility="Hidden"/>
 			
 

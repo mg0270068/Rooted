@@ -23,7 +23,8 @@ namespace Rooted
         public MainWindow()
         {
             InitializeComponent();
-        }
+			WindowState = WindowState.Maximized;
+		}
 
         private void OrderEntryClick(object sender, RoutedEventArgs e)
         {
