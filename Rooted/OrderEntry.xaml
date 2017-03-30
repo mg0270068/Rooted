@@ -41,6 +41,7 @@
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
 
 
@@ -48,10 +49,18 @@
 			<TextBlock Text="City" FontSize="20" Grid.Column="0"/>
 			<TextBox Margin="54,0,92,0"/>
 			<TextBlock Text="State" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="96,0,245,0"/>
-			<TextBox Grid.Column="1" Margin="167,0,0,0"/>
-		</Grid>
+			<TextBox Grid.Column="2" Margin="167,0,0,0"/>
+           
+            <CheckBox Margin="80 0 0 0" Grid.Column="3" Content="Deceased" FontSize="10">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+        </Grid>
+        
+        <Button Width="150" Content="Next" FontSize="25" Margin="1500 300 0 0"/>
+
+    </StackPanel>
 
 
-
-	</StackPanel>
 </Page>

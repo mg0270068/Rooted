@@ -35,5 +35,10 @@ namespace Rooted
 		{
 			Main.Content = new Frame();
 		}
-	}
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new SalesQuote();
+        }
+    }
 }
