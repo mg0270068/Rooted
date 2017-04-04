@@ -28,7 +28,8 @@ namespace Rooted
 
         private void OrderEntryClick(object sender, RoutedEventArgs e)
         {
-			Main.Content = new OrderEntry();
+            Main.Content = new OrderEntry();
+            
         }
 
 		private void Button_Click(object sender, RoutedEventArgs e)

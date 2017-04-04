@@ -28,9 +28,11 @@ namespace Rooted
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
-            Main.Content = new PricingPage();
-           
-          
+            
+            Uri uri = new Uri("PricingPage.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
+
+
         }
     }
 }

@@ -8,26 +8,25 @@
       d:DesignHeight="1000" d:DesignWidth="1500"
       Title="PricingPage">
     <StackPanel Background="#eee">
-        
-        
-        
-    <Grid>
 
 
+        
+
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0" Text="Enter Price" FontSize="20"/>
-        <TextBox Grid.Column="1" FontSize="20"/>
-        
-    </Grid>
-    
-  
-    
-    
-      </StackPanel>
+            <TextBlock Margin="0 10 0 0" Grid.Column="0" Text="Enter Price" FontSize="20"/>
+            <TextBox Margin="112,10,474,0" FontSize="20"/>
 
-  
+        </Grid>
+
+
+
+
+    </StackPanel>
+
+
 
 </Page>

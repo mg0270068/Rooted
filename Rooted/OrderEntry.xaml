@@ -4,67 +4,132 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Rooted"
-      mc:Ignorable="d" 
-      d:DesignHeight="1000" d:DesignWidth="1800"
-      Title="OrderEntry">
-
-	<StackPanel Background="#eee">
-
-		<Grid>
-			<TextBlock Text="Enter Customer Order Information" Margin="0 30 0 0" FontSize="30"/>
-		</Grid>
+      mc:Ignorable="d" d:DesignWidth="1800"
+      Title="OrderEntry" Height="1247.2">
 
 
-		<Grid Margin="0 0 0 50">
-
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="342*"/>
-				<ColumnDefinition Width="261*"/>
-				<ColumnDefinition Width="80*"/>
-				<ColumnDefinition Width="342*"/>
-				<ColumnDefinition Width="341*"/>
-			</Grid.ColumnDefinitions>
-
-			<TextBlock Margin="10,30,251,0" Text="First Name" Grid.Column="0" FontSize="20" Grid.ColumnSpan="2"/>
-            <TextBox Margin="122,30,141,0" Grid.ColumnSpan="2" FontSize="20"/>
-			<TextBlock Margin="234,30,0,0" Text="Last Name" Grid.Column="1" FontSize="20" RenderTransformOrigin="1.164,0.519" Grid.ColumnSpan="2"/>
-            <TextBox Margin="35,30,214,0" Grid.Column="3" Grid.ColumnSpan="2" FontSize="20"/>
-		</Grid>
-
-		<TextBlock Text="Enter Customer Street Address:" FontSize="20"/>
-        <TextBox Margin="0 0 0 0" Height="28" FontSize="20"/>
+    <Border Margin="0,10,0,602" BorderBrush="Black" BorderThickness="5">
+        <StackPanel Background="#eee" HorizontalAlignment="Right" Width="1887" Margin="-97,0,0,0">
 
 
-		<Grid Margin="0 50 0 0">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-			</Grid.ColumnDefinitions>
+            <Grid>
+                <TextBlock Text="Enter Customer Order Information:" Margin="10 30 0 0" FontSize="30"/>
+            </Grid>
 
 
+            <Grid Margin="0 0 0 50">
 
-			<TextBlock Text="City" FontSize="20" Grid.Column="0"/>
-			<TextBox Margin="54,0,92,0" FontSize="20"/>
-			<TextBlock Text="State" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="96,0,245,0"/>
-            <TextBox Grid.Column="2" Margin="167,0,0,0" FontSize="20"/>
-           
-            <CheckBox Margin="80 0 0 0" Grid.Column="3" Content="Deceased" FontSize="10">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="2" ScaleY="2"/>
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-        </Grid>
-        
-        <Button Width="150" Content="Next" FontSize="25" Margin="1500 300 0 0" Click="Button_Click"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="342*"/>
+                    <ColumnDefinition Width="261*"/>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="342*"/>
+                    <ColumnDefinition Width="341*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Margin="10,30,251,0" Text="First Name:" Grid.Column="0" FontSize="20" Grid.ColumnSpan="2"/>
+                <TextBox Margin="117,30,25,0" FontSize="20"/>
+                <TextBlock Margin="234,30,0,0" Text="Last Name:" Grid.Column="1" FontSize="20" RenderTransformOrigin="1.164,0.519" Grid.ColumnSpan="2"/>
+                <TextBox Margin="10,30,243,0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20"/>
+            </Grid>
+
+            <TextBlock Text="Enter Customer Street Address:" FontSize="20" Margin="10,0,0,0"/>
+            <TextBox Margin="10,0,1412,0" Height="28" FontSize="20"/>
+
+
+            <Grid Margin="0 50 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
 
 
-        <Frame x:Name ="Main" Content="" Height="995" NavigationUIVisibility="Hidden"/>
+                <TextBlock Text="City:" FontSize="20" Grid.Column="0" Margin="10,0,0,0"/>
+                <TextBox Margin="0,0,92,0" FontSize="20" HorizontalAlignment="Right" Width="108"/>
+                <TextBlock Text="State:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="5,0,336,0"/>
 
-    </StackPanel>
 
+                <TextBlock Text="Zip Code:" FontSize="20" Grid.Column="2" Margin="162,4,179,-4" Grid.ColumnSpan="2"/>
+                <TextBox Grid.Column="3" Margin="30,0,137,0" FontSize="20"/>
+                <ComboBox FontSize="20" Grid.ColumnSpan="2" Margin="65,0,220,0" Grid.Column="1">
+
+                    <ComboBoxItem Tag="AL">Alabama</ComboBoxItem>
+                    <ComboBoxItem Tag="AK">Alaska</ComboBoxItem>
+                    <ComboBoxItem Tag="AZ">Arizona</ComboBoxItem>
+                    <ComboBoxItem Tag="AR">Arkansas</ComboBoxItem>
+                    <ComboBoxItem Tag="CA">California</ComboBoxItem>
+                    <ComboBoxItem Tag="CO">Colorado</ComboBoxItem>
+                    <ComboBoxItem Tag="CT">Connecticut</ComboBoxItem>
+                    <ComboBoxItem Tag="DE">Delaware</ComboBoxItem>
+                    <ComboBoxItem Tag="FL">Florida</ComboBoxItem>
+                    <ComboBoxItem Tag="GA">Georgia</ComboBoxItem>
+                    <ComboBoxItem Tag="HI">Hawaii</ComboBoxItem>
+                    <ComboBoxItem Tag="ID">Idaho</ComboBoxItem>
+                    <ComboBoxItem Tag="IL">Illinois</ComboBoxItem>
+                    <ComboBoxItem Tag="IN">Indiana</ComboBoxItem>
+                    <ComboBoxItem Tag="IA">Iowa</ComboBoxItem>
+                    <ComboBoxItem Tag="KS">Kansas</ComboBoxItem>
+                    <ComboBoxItem Tag="KY">Kentucky</ComboBoxItem>
+                    <ComboBoxItem Tag="LA">Louisiana</ComboBoxItem>
+                    <ComboBoxItem Tag="ME">Maine</ComboBoxItem>
+                    <ComboBoxItem Tag="MD">Maryland</ComboBoxItem>
+                    <ComboBoxItem Tag="MA">Massachusetts</ComboBoxItem>
+                    <ComboBoxItem Tag="MI">Michigan</ComboBoxItem>
+                    <ComboBoxItem Tag="MN">Minnesota</ComboBoxItem>
+                    <ComboBoxItem Tag="MS">Mississippi</ComboBoxItem>
+                    <ComboBoxItem Tag="MO">Missouri</ComboBoxItem>
+                    <ComboBoxItem Tag="MT">Montana</ComboBoxItem>
+                    <ComboBoxItem Tag="NE">Nebraska</ComboBoxItem>
+                    <ComboBoxItem Tag="NV">Nevada</ComboBoxItem>
+                    <ComboBoxItem Tag="NH">New Hampshire</ComboBoxItem>
+                    <ComboBoxItem Tag="NJ">New Jersey</ComboBoxItem>
+                    <ComboBoxItem Tag="NM">New Mexico</ComboBoxItem>
+                    <ComboBoxItem Tag="NY">New York</ComboBoxItem>
+                    <ComboBoxItem Tag="NC">North Carolina</ComboBoxItem>
+                    <ComboBoxItem Tag="ND">North Dakota</ComboBoxItem>
+                    <ComboBoxItem Tag="OH">Ohio</ComboBoxItem>
+                    <ComboBoxItem Tag="OK">Oklahoma</ComboBoxItem>
+                    <ComboBoxItem Tag="OR">Oregon</ComboBoxItem>
+                    <ComboBoxItem Tag="PA">Pennsylvania</ComboBoxItem>
+                    <ComboBoxItem Tag="RI">Rhode Island</ComboBoxItem>
+                    <ComboBoxItem Tag="SC">South Carolina</ComboBoxItem>
+                    <ComboBoxItem Tag="SD">South Dakota</ComboBoxItem>
+                    <ComboBoxItem Tag="TN">Tennessee</ComboBoxItem>
+                    <ComboBoxItem Tag="TX">Texas</ComboBoxItem>
+                    <ComboBoxItem Tag="UT">Utah</ComboBoxItem>
+                    <ComboBoxItem Tag="VT">Vermont</ComboBoxItem>
+                    <ComboBoxItem Tag="VA">Virginia</ComboBoxItem>
+                    <ComboBoxItem Tag="WA">Washington</ComboBoxItem>
+                    <ComboBoxItem Tag="WV">West Virginia</ComboBoxItem>
+                    <ComboBoxItem Tag="WI">Wisconsin</ComboBoxItem>
+                    <ComboBoxItem Tag="WY">Wyoming</ComboBoxItem>
+                </ComboBox>
+
+
+                <CheckBox Margin="98,4,252,-4" Grid.Column="4" Content="Deceased" FontSize="10" Grid.ColumnSpan="2">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Width="150" Content="Next" FontSize="25" Margin="1587,242,43,58" Click="Button_Click" RenderTransformOrigin="0.5,-2.351"/>
+            </Grid>
+
+
+            <Frame x:Name ="Main" Content="" Height="1" NavigationUIVisibility="Hidden"/>
+
+        </StackPanel>
+
+    </Border>
 
 </Page>
