@@ -15,14 +15,25 @@ namespace Rooted
 		string city;
 		string state;
 		string zip;
+		double initialSale;
+		double tax;
+		double finalSale;
+		
 
 
 
 		//public entry class for access by other sections of the program
-		public Entry(string fname, string lname, string add, string ct, string st, string zp)
+		public Entry(string fname, string lname, string add, string ct, string st, string zp, double initsale, double tx, double fsale)
 		{
-
-
+			FirstName = fname;
+			LastName = lname;
+			Address = add;
+			City = ct;
+			State = st;
+			Zip = zp;
+			InitialSale = initsale;
+			Tax = tx;
+			FinalSale = fsale;
 		}
 
 		//just in case
@@ -45,6 +56,8 @@ namespace Rooted
 		public string City { get => city; set => city = value; }
 		public string State { get => state; set => state = value; }
 		public string Zip { get => zip; set => zip = value; }
-
+		public double InitialSale { get => initialSale; set => initialSale = value; }
+		public double Tax { get => tax; set => tax = value; }
+		public double FinalSale { get => finalSale; set => finalSale = value; }
 	}
 }
