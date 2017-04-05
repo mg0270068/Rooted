@@ -4,28 +4,33 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Rooted"
-      mc:Ignorable="d" 
-      d:DesignHeight="1000" d:DesignWidth="1500"
-      Title="PricingPage">
-    <StackPanel Background="#eee">
+      mc:Ignorable="d" d:DesignWidth="1500"
+      Title="PricingPage" Height="1247.2">
 
 
-        
+    <Border Margin="0,10,0,602" BorderBrush="Black" BorderThickness="5">
+        <StackPanel Background="#eee" Margin="0,0,0,5">
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Margin="0 10 0 0" Grid.Column="0" Text="Enter Price" FontSize="20"/>
-            <TextBox Margin="112,10,474,0" FontSize="20"/>
-
-        </Grid>
+            <Grid>
+                <TextBlock Text="Enter Pricing:" Margin="10 30 0 0" FontSize="30"/>
+            </Grid>
 
 
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="10,56,735,-46" Grid.Column="0" Text="Enter Price:" FontSize="20" Grid.ColumnSpan="2"/>
+                <TextBox Margin="118,51,468,-41" FontSize="20"/>
+
+            </Grid>
 
 
-    </StackPanel>
+
+
+        </StackPanel>
+    </Border>
 
 
 

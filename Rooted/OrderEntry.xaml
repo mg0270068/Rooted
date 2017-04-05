@@ -33,10 +33,18 @@
                 <TextBox Margin="10,30,243,0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20"/>
             </Grid>
 
-            <TextBlock Text="Enter Customer Street Address:" FontSize="20" Margin="10,0,0,0"/>
-            <TextBox Margin="10,0,1412,0" Height="28" FontSize="20"/>
-
-
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Enter Customer Street Address:" FontSize="20" Margin="10,0,180,0"/>
+                <TextBox Margin="306,0,293,0" Height="28" FontSize="20" Grid.ColumnSpan="2"/>
+                <TextBlock Text="Enter Customer Phone Number:" FontSize="20" Margin="231,0,251,0" Grid.ColumnSpan="2" Grid.Column="1"/>
+                <TextBox Margin="51,0,113,0" Height="28" FontSize="20" Grid.Column="2"/>
+            </Grid>
             <Grid Margin="0 50 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
