@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BlankHomePage.xaml.cs">
+      <DependentUpon>BlankHomePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entry.cs" />
     <Compile Include="PricingPage.xaml.cs">
       <DependentUpon>PricingPage.xaml</DependentUpon>
@@ -62,6 +65,10 @@
     <Compile Include="SalesQuote.xaml.cs">
       <DependentUpon>SalesQuote.xaml</DependentUpon>
     </Compile>
+    <Page Include="BlankHomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

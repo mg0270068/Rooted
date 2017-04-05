@@ -16,24 +16,13 @@ using System.Windows.Shapes;
 namespace Rooted
 {
     /// <summary>
-    /// Interaction logic for SalesQuote.xaml
+    /// Interaction logic for BlankHomePage.xaml
     /// </summary>
-    public partial class SalesQuote : Page
+    public partial class BlankHomePage : Page
     {
-        public SalesQuote()
+        public BlankHomePage()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Uri uri = new Uri("BlankHomePage.xaml", UriKind.Relative);
-            this.NavigationService.Navigate(uri);
         }
     }
 }
