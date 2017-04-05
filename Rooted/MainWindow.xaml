@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rooted"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1366" Width="768">
+        Title="" Height="1366" Width="768">
 	
     <Border Padding="10">
 
