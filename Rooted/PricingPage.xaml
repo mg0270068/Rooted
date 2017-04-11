@@ -22,7 +22,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Margin="10,56,735,-46" Grid.Column="0" Text="Enter Price:" FontSize="20" Grid.ColumnSpan="2"/>
-                <TextBox Margin="118,51,468,-41" FontSize="20"/>
+                <TextBox x:Name="PricingPriceBx" Margin="118,51,468,-41" FontSize="20" TextChanged="TextBox_TextChanged"/>
 
             </Grid>
 

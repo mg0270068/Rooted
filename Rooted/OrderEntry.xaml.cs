@@ -25,6 +25,8 @@ namespace Rooted
             InitializeComponent();
         }
 
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
@@ -32,6 +34,16 @@ namespace Rooted
             Uri uri = new Uri("PricingPage.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
 
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void OrderLastNameBx_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
     }
