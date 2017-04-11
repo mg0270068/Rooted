@@ -28,9 +28,9 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Margin="10,30,251,0" Text="First Name:" Grid.Column="0" FontSize="20" Grid.ColumnSpan="2"/>
-                <TextBox Margin="117,30,25,0" FontSize="20"/>
+                <TextBox x:Name="OrderFirstNameBx" Margin="117,30,25,0" FontSize="20" Height="29" VerticalAlignment="Top" TextChanged="TextBox_TextChanged"/>
                 <TextBlock Margin="234,30,0,0" Text="Last Name:" Grid.Column="1" FontSize="20" RenderTransformOrigin="1.164,0.519" Grid.ColumnSpan="2"/>
-                <TextBox Margin="10,30,243,0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20"/>
+                <TextBox x:Name="OrderLastNameBx" Margin="10,30,243,0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" Height="29" VerticalAlignment="Top" TextChanged="OrderLastNameBx_TextChanged"/>
             </Grid>
 
             <Grid>
@@ -41,9 +41,9 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Enter Customer Street Address:" FontSize="20" Margin="10,0,180,0"/>
-                <TextBox Margin="306,0,293,0" Height="28" FontSize="20" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="OrderEmailBx" Margin="306,0,293,0" Height="28" FontSize="20" Grid.ColumnSpan="2"/>
                 <TextBlock Text="Enter Customer Phone Number:" FontSize="20" Margin="231,0,251,0" Grid.ColumnSpan="2" Grid.Column="1"/>
-                <TextBox Margin="51,0,113,0" Height="28" FontSize="20" Grid.Column="2"/>
+                <TextBox x:Name="OrderPhoneBx" Margin="51,0,113,0" Height="28" FontSize="20" Grid.Column="2"/>
             </Grid>
             <Grid Margin="0 50 0 0">
                 <Grid.ColumnDefinitions>
@@ -59,14 +59,16 @@
 
 
                 <TextBlock Text="City:" FontSize="20" Grid.Column="0" Margin="10,0,0,0"/>
-                <TextBox Margin="0,0,92,0" FontSize="20" HorizontalAlignment="Right" Width="108"/>
+                <TextBox x:Name="OrderCityBx" Margin="0,0,92,0" FontSize="20" HorizontalAlignment="Right" Width="108"/>
                 <TextBlock Text="State:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="5,0,336,0"/>
 
 
                 <TextBlock Text="Zip Code:" FontSize="20" Grid.Column="2" Margin="162,4,179,-4" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Column="3" Margin="30,0,137,0" FontSize="20"/>
-                <ComboBox FontSize="20" Grid.ColumnSpan="2" Margin="65,0,220,0" Grid.Column="1">
+                <TextBox x:Name="OrderZipBx" Grid.Column="3" Margin="30,0,137,0" FontSize="20"/>
+                <ComboBox x:Name="OrderStateDropDown" FontSize="20" Grid.ColumnSpan="2" Margin="65,0,220,0" Grid.Column="1">
 
+                    <!-- State Drop down box.-->
+                    
                     <ComboBoxItem Tag="AL">Alabama</ComboBoxItem>
                     <ComboBoxItem Tag="AK">Alaska</ComboBoxItem>
                     <ComboBoxItem Tag="AZ">Arizona</ComboBoxItem>
@@ -120,7 +122,7 @@
                 </ComboBox>
 
 
-                <CheckBox Margin="98,4,252,-4" Grid.Column="4" Content="Deceased" FontSize="10" Grid.ColumnSpan="2">
+                <CheckBox x:Name="OrderDeceasedBx" Margin="98,4,252,-4" Grid.Column="4" Content="Deceased" FontSize="10" Grid.ColumnSpan="2">
                     <CheckBox.LayoutTransform>
                         <ScaleTransform ScaleX="2" ScaleY="2"/>
                     </CheckBox.LayoutTransform>

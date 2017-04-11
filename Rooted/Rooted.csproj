@@ -58,7 +58,6 @@
     <Compile Include="BlankHomePage.xaml.cs">
       <DependentUpon>BlankHomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Entry.cs" />
     <Compile Include="PricingPage.xaml.cs">
       <DependentUpon>PricingPage.xaml</DependentUpon>
     </Compile>

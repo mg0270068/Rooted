@@ -26,22 +26,30 @@ namespace Rooted
 			WindowState = WindowState.Maximized;
 		}
 
+
+        // Order entry button on main window
         private void OrderEntryClick(object sender, RoutedEventArgs e)
         {
             Main.Content = new OrderEntry();
             
         }
 
+
+        // Home button on main window
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			Main.Content = new Frame();
 		}
 
+
+        // Sales quote button on main window
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Main.Content = new SalesQuote();
         }
 
+
+        // Exit button on main window
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
