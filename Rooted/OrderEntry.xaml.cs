@@ -29,7 +29,21 @@ namespace Rooted
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+
+            //will store the initial names and variables on the entry
+            try
+            {
+                //TODO: add if statements to check for blank strings
+                Entry initEntry = new Entry(OrderFirstNameBx.Text, OrderLastNameBx.Text, OrderStreetAddressBx.Text, OrderPhoneBx.Text, OrderCityBx.Text, OrderStateDropDown.Text, OrderZipBx.Text);
+                //for now, output to a console line for testing
+                //TODO: push information to other constructor on clearing the confirmation screen
+                Console.WriteLine(initEntry.ToString());
+
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error: " + ex);
+            }
             
             Uri uri = new Uri("PricingPage.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
