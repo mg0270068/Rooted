@@ -18,12 +18,10 @@ namespace Rooted
 		double initialSale;
 		double tax;
 		double finalSale;
-		
 
 
-
-		//public entry class for access by other sections of the program
-		public Entry(string fname, string lname, string add, string ct, string st, string zp, double initsale, double tx, double fsale)
+        //public entry class for access by other sections of the program
+        public Entry(string fname, string lname, string add, string ct, string st, string zp, double initsale, double tx, double fsale)
 		{
 			FirstName = fname;
 			LastName = lname;
@@ -39,7 +37,7 @@ namespace Rooted
 		//just in case
 		public override string ToString()
 		{
-			return base.ToString();
+			return firstName + " " + lastName + ", " + "at " + address + " " + city + ", " + state + " " + zip + "\nInitial Sale: " + initialSale + "\nTax: " + tax + "\nFinal Sale: " + finalSale;
 		}
 
 		//TODO: figure out what data we're sending to QuickBooks, then implement this method to send variables where necessary
@@ -49,15 +47,123 @@ namespace Rooted
 			return "";
 		}
 
-		//getters and setters go here
-		public string FirstName { get => firstName; set => firstName = value; }
-		public string LastName { get => lastName; set => lastName = value; }
-		public string Address { get => address; set => address = value; }
-		public string City { get => city; set => city = value; }
-		public string State { get => state; set => state = value; }
-		public string Zip { get => zip; set => zip = value; }
-		public double InitialSale { get => initialSale; set => initialSale = value; }
-		public double Tax { get => tax; set => tax = value; }
-		public double FinalSale { get => finalSale; set => finalSale = value; }
-	}
+        //getters and setters go here
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
+
+            set
+            {
+                firstName = value;
+            }
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+
+            set
+            {
+                lastName = value;
+            }
+        }
+
+        public string Address
+        {
+            get
+            {
+                return address;
+            }
+
+            set
+            {
+                address = value;
+            }
+        }
+
+        public string City
+        {
+            get
+            {
+                return city;
+            }
+
+            set
+            {
+                city = value;
+            }
+        }
+
+        public string State
+        {
+            get
+            {
+                return state;
+            }
+
+            set
+            {
+                state = value;
+            }
+        }
+
+        public string Zip
+        {
+            get
+            {
+                return zip;
+            }
+
+            set
+            {
+                zip = value;
+            }
+        }
+
+        public double InitialSale
+        {
+            get
+            {
+                return initialSale;
+            }
+
+            set
+            {
+                initialSale = value;
+            }
+        }
+
+        public double Tax
+        {
+            get
+            {
+                return tax;
+            }
+
+            set
+            {
+                tax = value;
+            }
+        }
+
+        public double FinalSale
+        {
+            get
+            {
+                return finalSale;
+            }
+
+            set
+            {
+                finalSale = value;
+            }
+        }
+
+    }
 }
