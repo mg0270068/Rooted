@@ -1,0 +1,41 @@
+﻿<Page x:Class="Rooted.Confirmation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Rooted"
+      mc:Ignorable="d" 
+      d:DesignHeight="1247.2" d:DesignWidth="1500"
+      Title="Confirmation">
+
+    <Border Margin="0,10,0,350" BorderBrush="Black" BorderThickness="5">
+        <StackPanel Background="#eee" Margin="0,0,0,5">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="10,56,735,-46" Grid.Column="0" Text="Confirm Order" FontSize="30"/>
+            </Grid>
+            <TextBlock x:Name="ConfirmFirstNameTx" Margin="10,56,735,-46" Text="First Name:" FontSize="20"/>
+            <TextBlock x:Name="ConfirmLastNameTx" Margin="10,56,735,-46" Text="Last Name:" FontSize="20"/>
+            <TextBlock x:Name="ConfirmAddressTx" Margin="10,56,735,-46" Text="Street Address:" FontSize="20"/>
+            <TextBlock x:Name="ConfirmCityTx" Margin="10,56,735,-46" Text="City:" FontSize="20"/>
+            <TextBlock x:Name="ConfirmStateTx" Margin="10,56,735,-46" Text="State:" FontSize="20"/>
+            <TextBlock x:Name="ConfirmZiptx" Margin="10,56,735,-46" Text="ZipCode:" FontSize="20"/>
+            <TextBlock x:Name="ConfirmDeceasedTx" Margin="10,56,735,-46" Text="Deceased:" FontSize="20"/>
+            <TextBlock x:Name="ConfirmDescriptionTx" Margin="10,56,735,-46" Text="Description:" FontSize="20"/>
+            <TextBlock x:Name="ConfirmPriceTx" Margin="10,56,735,-46" Text="Price:" FontSize="20"/>
+            <TextBlock x:Name="ConfirmTaxTx" Margin="10,56,735,-46" Text="Tax:" FontSize="20"/>
+            <TextBlock x:Name="ConfirmGrandTotalTx" Margin="10,56,735,-46" Text="Grand Total:" FontSize="20"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="ConfirmSubmitBtn" Width="200" Content="Submit Order" FontSize="25" Margin="1398,80,-108,220" Click="Button_Click" RenderTransformOrigin="0.5,-2.351"/>
+            </Grid>
+            
+        </StackPanel>
+    </Border>
+</Page>

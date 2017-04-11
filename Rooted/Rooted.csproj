@@ -58,6 +58,9 @@
     <Compile Include="BlankHomePage.xaml.cs">
       <DependentUpon>BlankHomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Confirmation.xaml.cs">
+      <DependentUpon>Confirmation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entry.cs" />
     <Compile Include="PricingPage.xaml.cs">
       <DependentUpon>PricingPage.xaml</DependentUpon>
@@ -66,6 +69,10 @@
       <DependentUpon>SalesQuote.xaml</DependentUpon>
     </Compile>
     <Page Include="BlankHomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Confirmation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

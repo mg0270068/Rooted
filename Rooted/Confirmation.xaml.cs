@@ -16,25 +16,20 @@ using System.Windows.Shapes;
 namespace Rooted
 {
     /// <summary>
-    /// Interaction logic for PricingPage.xaml
+    /// Interaction logic for Confirmation.xaml
     /// </summary>
-    public partial class PricingPage : Page
+    public partial class Confirmation : Page
     {
-        public PricingPage()
+        public Confirmation()
         {
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
-        }
-
-        // Next button on pricing page
+        // confirmation submit button
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Uri uri = new Uri("Confirmation.xaml", UriKind.Relative);
-            this.NavigationService.Navigate(uri);
+
         }
     }
 }

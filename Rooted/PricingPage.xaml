@@ -15,7 +15,7 @@
                 <TextBlock Text="Enter Pricing:" Margin="10 30 0 0" FontSize="30"/>
             </Grid>
 
-
+        <!-- Enter Price -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -26,7 +26,24 @@
 
             </Grid>
 
+         <!-- Description of Purchase -->
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Margin="10,56,735,-46" Grid.Column="0" Text="Enter Description:" FontSize="20" Grid.ColumnSpan="2"/>
+            </Grid>
 
+        <TextBox x:Name="PricingDescriptionBx" Margin="10,51,758,-41" FontSize="20" TextChanged="TextBox_TextChanged" Height="231"/>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="PricingNextBtn" Width="150" Content="Next" FontSize="25" Margin="1443,146,-103,154" Click="Button_Click" RenderTransformOrigin="0.5,-2.351"/>
+            </Grid>
 
 
         </StackPanel>
