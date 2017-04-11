@@ -41,7 +41,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Enter Customer Street Address:" FontSize="20" Margin="10,0,180,0"/>
-                <TextBox x:Name="OrderEmailBx" Margin="306,0,293,0" Height="28" FontSize="20" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="OrderStreetAddressBx" Margin="306,0,293,0" Height="28" FontSize="20" Grid.ColumnSpan="2"/>
                 <TextBlock Text="Enter Customer Phone Number:" FontSize="20" Margin="231,0,251,0" Grid.ColumnSpan="2" Grid.Column="1"/>
                 <TextBox x:Name="OrderPhoneBx" Margin="51,0,113,0" Height="28" FontSize="20" Grid.Column="2"/>
             </Grid>
