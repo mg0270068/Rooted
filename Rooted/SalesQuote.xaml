@@ -54,7 +54,7 @@
             </Grid>
 
             <Grid>
-                <Button Width="150" Content="Submit" FontSize="25" Margin="1594,298,46,2" Click="Button_Click"/>
+                <Button Width="150" Content="Submit" FontSize="25" Margin="1594,298,46,0" Click="Button_Click"/>
             </Grid>
 
         </StackPanel>
