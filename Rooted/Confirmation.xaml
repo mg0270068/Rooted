@@ -106,7 +106,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="6*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmTaxTx" Text="First Name:" FontSize="20" Grid.Column="0"/>
+                <TextBlock x:Name="ConfirmTaxTx" Text="Tax: " FontSize="20" Grid.Column="0"/>
                 <TextBlock x:Name="ConfirmTaxOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
             </Grid>
             <Grid>
@@ -121,7 +121,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="ConfirmSubmitBtn" Width="200" Content="Submit Order" FontSize="25" Margin="1398,80,-108,220" Click="Button_Click" RenderTransformOrigin="0.5,-2.351"/>
+                <Button x:Name="ConfirmSubmitBtn" Width="200" Content="Submit Order" FontSize="25" Margin="1412,16,-122,284" Click="Button_Click" RenderTransformOrigin="0.5,-2.351"/>
             </Grid>
             
         </StackPanel>
