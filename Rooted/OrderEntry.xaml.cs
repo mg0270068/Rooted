@@ -45,7 +45,7 @@ namespace Rooted
                 Console.WriteLine("Error: " + ex);
             }
             
-            Uri uri = new Uri("PricingPage.xaml", UriKind.Relative);
+            Uri uri = new Uri("DeliveryInfo.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
 
 

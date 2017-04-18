@@ -61,6 +61,9 @@
     <Compile Include="Confirmation.xaml.cs">
       <DependentUpon>Confirmation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DeliveryInfo.xaml.cs">
+      <DependentUpon>DeliveryInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entry.cs" />
     <Compile Include="PricingPage.xaml.cs">
       <DependentUpon>PricingPage.xaml</DependentUpon>
@@ -73,6 +76,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Confirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeliveryInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
