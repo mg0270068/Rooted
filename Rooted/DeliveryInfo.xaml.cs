@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Rooted
 {
     /// <summary>
@@ -20,15 +21,24 @@ namespace Rooted
     /// </summary>
     public partial class DeliveryInfo : Page
     {
+        public Entry deliveryEntry;
+
         public DeliveryInfo()
         {
             InitializeComponent();
+            deliveryEntry = deliveryEntry.ReceiveEntry();
+            //test output
+            Console.WriteLine(deliveryEntry.ToString());
         }
 
+
+        //on clicking the next button
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Uri uri = new Uri("PricingPage.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
+
+            //access class information stored on last page
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rooted
 {
-    class Entry
+    public class Entry
     {
         //base information data
         string firstName;
@@ -53,12 +53,18 @@ namespace Rooted
             return firstName + " " + lastName + ", " + "at " + address + " " + city + ", " + state + " " + zip + "with phone number " + phoneNumber/*+ "\nInitial Sale: " + initialSale + "\nTax: " + tax + "\nFinal Sale: " + finalSale*/;
         }
 
-        //TODO: figure out what data we're sending to QuickBooks, then implement this method to send variables where necessary
-        public virtual string SendData()
+        //send entry class to necessary location in code
+        /*public virtual Entry SendEntry(Entry entry)
         {
-            //temporarily returns an empty string
-            return "";
-        }
+            initEntry = entry;
+            Console.WriteLine(initEntry.ToString());
+            return entry;
+        }*/
+
+       /* public virtual Entry ReceiveEntry()
+        {
+            return initEntry;
+        }*/
 
         //getters and setters go here
         public string FirstName
@@ -192,5 +198,7 @@ namespace Rooted
         }
     }
 }
+
+
 
 //TODO: Copy this into a final submission form

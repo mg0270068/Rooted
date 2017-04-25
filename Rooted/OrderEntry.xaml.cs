@@ -13,13 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Rooted
 {
     /// <summary>
     /// Interaction logic for OrderEntry.xaml
     /// </summary>
+
     public partial class OrderEntry : Page
     {
+
+
+        //local variables
+        public Entry orderEntry;
+
         public OrderEntry()
         {
             InitializeComponent();
@@ -34,10 +41,14 @@ namespace Rooted
             try
             {
                 //TODO: add if statements to check for blank strings
-                Entry initEntry = new Entry(OrderFirstNameBx.Text, OrderLastNameBx.Text, OrderStreetAddressBx.Text, OrderPhoneBx.Text, OrderCityBx.Text, OrderStateDropDown.Text, OrderZipBx.Text);
-                //for now, output to a console line for testing
-                //TODO: push information to other constructor on clearing the confirmation screen
-                Console.WriteLine(initEntry.ToString());
+                orderEntry = new Entry(OrderFirstNameBx.Text, OrderLastNameBx.Text, OrderStreetAddressBx.Text, OrderPhoneBx.Text, OrderCityBx.Text, OrderStateDropDown.Text, OrderZipBx.Text);
+
+                //send entry to entry Class for storage
+                orderEntry.SendEntry(orderEntry);
+
+
+                //output test
+               // Console.WriteLine(orderEntry.ToString());
 
             }
             catch(Exception ex)
