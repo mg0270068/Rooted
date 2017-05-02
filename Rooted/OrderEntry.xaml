@@ -4,53 +4,54 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Rooted"
-      mc:Ignorable="d" d:DesignWidth="1800"
-      Title="OrderEntry" Height="1247.2">
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="OrderEntry">
 
 
-    <Border Margin="0,10,0,602" BorderBrush="Black" BorderThickness="5">
-        <StackPanel Background="#eee" HorizontalAlignment="Right" Width="1887" Margin="-97,0,0,0">
-
+    <Border  BorderBrush="Black" BorderThickness="5" >
+        <StackPanel Background="#eee">
+        
 
             <Grid>
                 <TextBlock Text="Enter Customer Order Information:" Margin="10 30 0 0" FontSize="30"/>
             </Grid>
 
 
-            <Grid Margin="0 0 0 50">
+            <Grid Margin="0 0 0 30">
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="342*"/>
-                    <ColumnDefinition Width="261*"/>
-                    <ColumnDefinition Width="80*"/>
-                    <ColumnDefinition Width="342*"/>
-                    <ColumnDefinition Width="341*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Margin="10,30,251,0" Text="First Name:" Grid.Column="0" FontSize="20" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="OrderFirstNameBx" Margin="117,30,25,0" FontSize="20" Height="29" VerticalAlignment="Top" TextChanged="TextBox_TextChanged"/>
-                <TextBlock Margin="234,30,0,0" Text="Last Name:" Grid.Column="1" FontSize="20" RenderTransformOrigin="1.164,0.519" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="OrderLastNameBx" Margin="10,30,243,0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" Height="29" VerticalAlignment="Top" TextChanged="OrderLastNameBx_TextChanged"/>
+                <TextBlock Text="First Name:" HorizontalAlignment="Right" Grid.Column="0" FontSize="20"/>
+                <TextBox x:Name="OrderFirstNameBx" Grid.Column="1"  FontSize="20" TextChanged="TextBox_TextChanged"/>
+                <TextBlock  Text="Last Name:" HorizontalAlignment="Right" Grid.Column="2" FontSize="20"/>
+                <TextBox x:Name="OrderLastNameBx" Grid.Column="3" FontSize="20" TextChanged="OrderLastNameBx_TextChanged"/>
             </Grid>
 
+            <Grid Margin="0 0 0 30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Street Address:" HorizontalAlignment="Right" Grid.Column="0" FontSize="20"/>
+                <TextBox x:Name="OrderStreetAddressBx" Grid.Column="1" FontSize="20"/>
+                <TextBlock Text="Phone Number:" HorizontalAlignment="Right" FontSize="20" Grid.Column="2"/>
+                <TextBox x:Name="OrderPhoneBx" FontSize="20" Grid.Column="3"/>
+            </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="Enter Customer Street Address:" FontSize="20" Margin="10,0,180,0"/>
-                <TextBox x:Name="OrderStreetAddressBx" Margin="306,0,293,0" Height="28" FontSize="20" Grid.ColumnSpan="2"/>
-                <TextBlock Text="Enter Customer Phone Number:" FontSize="20" Margin="231,0,251,0" Grid.ColumnSpan="2" Grid.Column="1"/>
-                <TextBox x:Name="OrderPhoneBx" Margin="51,0,113,0" Height="28" FontSize="20" Grid.Column="2"/>
-            </Grid>
-            <Grid Margin="0 50 0 0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -58,17 +59,17 @@
 
 
 
-                <TextBlock Text="City:" FontSize="20" Grid.Column="0" Margin="10,0,0,0"/>
-                <TextBox x:Name="OrderCityBx" Margin="0,0,92,0" FontSize="20" HorizontalAlignment="Right" Width="108"/>
-                <TextBlock Text="State:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="5,0,336,0"/>
+                <TextBlock Text="City:" HorizontalAlignment="Right" FontSize="20" Grid.Column="0"/>
+                <TextBox x:Name="OrderCityBx" FontSize="20" Grid.Column="1"/>
+                <TextBlock Text="State:" FontSize="20" HorizontalAlignment="Right" Grid.Column="2"/>
+                
 
-
-                <TextBlock Text="Zip Code:" FontSize="20" Grid.Column="2" Margin="162,4,179,-4" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="OrderZipBx" Grid.Column="3" Margin="30,0,137,0" FontSize="20"/>
-                <ComboBox x:Name="OrderStateDropDown" FontSize="20" Grid.ColumnSpan="2" Margin="65,0,220,0" Grid.Column="1">
+                <TextBlock Text="Zip Code:" HorizontalAlignment="Right" FontSize="20" Grid.Column="4"/>
+                <TextBox x:Name="OrderZipBx" Grid.Column="5" FontSize="20"/>
+                <ComboBox x:Name="OrderStateDropDown" FontSize="20" Grid.Column="3">
 
                     <!-- State Drop down box.-->
-                    
+
                     <ComboBoxItem Tag="AL">Alabama</ComboBoxItem>
                     <ComboBoxItem Tag="AK">Alaska</ComboBoxItem>
                     <ComboBoxItem Tag="AZ">Arizona</ComboBoxItem>
@@ -121,18 +122,20 @@
                     <ComboBoxItem Tag="WY">Wyoming</ComboBoxItem>
                 </ComboBox>
             </Grid>
-            <Grid>
+            <Grid Margin="0,0,0,30">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="112*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Width="150" Content="Next" FontSize="25" Margin="1587,242,43,58" Click="Button_Click" RenderTransformOrigin="0.5,-2.351"/>
-            </Grid>
+                <Button Width="150" Content="Next" HorizontalAlignment="Right" FontSize="25"  Click="Button_Click"/>
+            </Grid> 
+        
+    </StackPanel>
+ </Border>
+          <!--   <Frame x:Name ="Main" Content="" Height="1" NavigationUIVisibility="Hidden"/>
 
+        -->
 
-            <Frame x:Name ="Main" Content="" Height="1" NavigationUIVisibility="Hidden"/>
-
-        </StackPanel>
-
-    </Border>
+  
 
 </Page>

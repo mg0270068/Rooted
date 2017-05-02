@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rooted
 {
-    public class Entry
+     public class Entry
     {
         //base information data
         string firstName;
@@ -81,6 +81,8 @@ namespace Rooted
         }*/
 
         //getters and setters go here
+
+    
         public string FirstName
         {
             get
@@ -229,3 +231,5 @@ namespace Rooted
 
 
 //TODO: Copy this into a final submission form
+
+    
