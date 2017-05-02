@@ -131,7 +131,7 @@
             </Grid>
 
             <Grid>
-                <Button Width="150" Content="Same as Billing" HorizontalAlignment="Left" FontSize="20" Margin="10,0,0,0"/>
+                <Button x:Name="SameAsBillingBtn" Width="150" Content="Same as Billing" HorizontalAlignment="Left" FontSize="20" Margin="10,0,0,0"/>
             </Grid>
 
             <Grid>

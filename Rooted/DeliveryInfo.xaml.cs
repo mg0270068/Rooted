@@ -23,7 +23,7 @@ namespace Rooted
     {
         Entry deliveryEntry;
         //reference entry to transfer to the delivery entry
-        Entry referenceEntry;
+        
 
         public DeliveryInfo()
         {
@@ -37,7 +37,7 @@ namespace Rooted
             DeliveryCityBx.Text = deliveryEntry.City;
             DeliveryStateDropDown.Text = deliveryEntry.State;
             DeliveryZipBx.Text = deliveryEntry.Zip;
-
+            
         }
 
 

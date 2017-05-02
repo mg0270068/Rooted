@@ -127,14 +127,14 @@
                     <ColumnDefinition Width="112*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Width="150" Content="Next" HorizontalAlignment="Right" FontSize="25"  Click="Button_Click"/>
-            </Grid> 
-        
-    </StackPanel>
+                <Button x:Name="NextBtn" Width="150" Content="Next" HorizontalAlignment="Right" FontSize="25"  Click="Button_Click"/>
+            </Grid>
+            <Frame x:Name ="Main" Content="" Height="1" NavigationUIVisibility="Hidden"/>
+        </StackPanel>
  </Border>
-          <!--   <Frame x:Name ="Main" Content="" Height="1" NavigationUIVisibility="Hidden"/>
+        
 
-        -->
+        
 
   
 
