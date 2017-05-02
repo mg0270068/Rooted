@@ -21,14 +21,23 @@ namespace Rooted
     /// </summary>
     public partial class DeliveryInfo : Page
     {
-        public Entry deliveryEntry;
+        Entry deliveryEntry;
+        //reference entry to transfer to the delivery entry
+        Entry referenceEntry;
 
         public DeliveryInfo()
         {
             InitializeComponent();
-            deliveryEntry = deliveryEntry.ReceiveEntry();
-            //test output
-            Console.WriteLine(deliveryEntry.ToString());
+            deliveryEntry = ((App)Application.Current).GetEntry();
+
+            //populate field with data
+            DeliveryFirstNameBx.Text = deliveryEntry.FirstName;
+            DeliveryLastNameBx.Text = deliveryEntry.LastName;
+            DeliveryStreetAddressBx.Text = deliveryEntry.Address;
+            DeliveryCityBx.Text = deliveryEntry.City;
+            DeliveryStateDropDown.Text = deliveryEntry.State;
+            DeliveryZipBx.Text = deliveryEntry.Zip;
+
         }
 
 
@@ -38,7 +47,13 @@ namespace Rooted
             Uri uri = new Uri("PricingPage.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
 
-            //access class information stored on last page
+            //test output
+            Console.WriteLine(deliveryEntry.ToString());
+        }
+
+        private void DeliveryDeceasedBx_Checked(object sender, RoutedEventArgs e)
+        {
+            deliveryEntry.IsDeceased = true;
         }
     }
 }

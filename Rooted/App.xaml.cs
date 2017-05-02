@@ -13,5 +13,24 @@ namespace Rooted
     /// </summary>
     public partial class App : Application
     {
+        Entry initialEntry;
+        Entry deliveryInfo;
+
+        //receive and send from initialEntry
+        public Entry GetEntry()
+        {
+            return initialEntry;
+        }
+
+        public void SendEntry(Entry entry)
+        {
+            initialEntry = entry;
+        }
+
+        //get deliveryEntry and store it
+        public void SendDeliveryInfo(Entry entry)
+        {
+            deliveryInfo = entry;
+        }
     }
 }

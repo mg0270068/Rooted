@@ -19,6 +19,7 @@ namespace Rooted
         double initialSale;
         double tax;
         double finalSale;
+        bool isDeceased = false;
 
         //first constructor; will pass this entry into the finalized entry
         public Entry(string fname, string lname, string add, string phone, string ct, string st, string zp)
@@ -32,7 +33,20 @@ namespace Rooted
             Zip = zp;
         }
 
-        //overloaded constructor
+        //overloaded constructor with extra boolean for deceased check; used with delivery information
+        public Entry(string fname, string lname, string add, string phone, string ct, string st, string zp, bool isdec)
+        {
+            FirstName = fname;
+            LastName = lname;
+            Address = add;
+            PhoneNumber = phone;
+            City = ct;
+            State = st;
+            Zip = zp;
+            IsDeceased = isdec;
+        }
+
+        //overloaded constructor for use with final page
         public Entry(string fname, string lname, string add, string phone, string ct, string st, string zp, double initsale, double tx, double fsale)
         {
             FirstName = fname;
@@ -194,6 +208,19 @@ namespace Rooted
             set
             {
                 phoneNumber = value;
+            }
+        }
+
+        public bool IsDeceased
+        {
+            get
+            {
+                return isDeceased;
+            }
+
+            set
+            {
+                isDeceased = value;
             }
         }
     }

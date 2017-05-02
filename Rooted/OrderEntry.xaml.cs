@@ -43,12 +43,12 @@ namespace Rooted
                 //TODO: add if statements to check for blank strings
                 orderEntry = new Entry(OrderFirstNameBx.Text, OrderLastNameBx.Text, OrderStreetAddressBx.Text, OrderPhoneBx.Text, OrderCityBx.Text, OrderStateDropDown.Text, OrderZipBx.Text);
 
-                //send entry to entry Class for storage
-                orderEntry.SendEntry(orderEntry);
+                //send entry to initialEntry Class for storage
+                ((App)Application.Current).SendEntry(orderEntry);
 
 
                 //output test
-               // Console.WriteLine(orderEntry.ToString());
+                Console.WriteLine(orderEntry.ToString());
 
             }
             catch(Exception ex)
