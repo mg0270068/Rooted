@@ -139,7 +139,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Width="150" Content="Next" FontSize="25" Margin="1444,196,-104,104"  RenderTransformOrigin="0.5,-2.351" Click="Button_Click"/>
+                <Button Width="150" Content="Next" FontSize="25" Margin="1444,196,-104,104" Click="Button_Click"/>
             </Grid>
 
 
