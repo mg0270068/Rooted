@@ -125,9 +125,13 @@
 
             </Grid>
 
-            <Grid>
+            <Grid Margin="0,0,0,80">
                 <TextBlock Text="Delivery Instructions:" FontSize="20" Padding="0,20,0,0" Margin="10,0,-10,0"/>
                 <TextBox x:Name="PricingDescriptionBx" Margin="205,28,647,-78" FontSize="20"/>
+            </Grid>
+
+            <Grid>
+                <Button Width="150" Content="Same as Billing" HorizontalAlignment="Left" FontSize="20" Margin="10,0,0,0"/>
             </Grid>
 
             <Grid>
