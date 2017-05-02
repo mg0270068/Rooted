@@ -41,7 +41,7 @@
 			
 
 
-			<Frame x:Name ="Main" Content="" Height="995" NavigationUIVisibility="Hidden"/>
+			<Frame x:Name ="Main" Content="" Height="299" NavigationUIVisibility="Hidden"/>
 			
 
 

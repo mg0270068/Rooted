@@ -44,7 +44,7 @@ namespace Rooted
                 orderEntry = new Entry(OrderFirstNameBx.Text, OrderLastNameBx.Text, OrderStreetAddressBx.Text, OrderPhoneBx.Text, OrderCityBx.Text, OrderStateDropDown.Text, OrderZipBx.Text);
 
                 //send entry to entry Class for storage
-                orderEntry.SendEntry(orderEntry);
+              //  orderEntry.SendEntry(orderEntry);
 
 
                 //output test

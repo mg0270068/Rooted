@@ -26,7 +26,7 @@ namespace Rooted
         public DeliveryInfo()
         {
             InitializeComponent();
-            deliveryEntry = deliveryEntry.ReceiveEntry();
+           // deliveryEntry = deliveryEntry.ReceiveEntry();
             //test output
             Console.WriteLine(deliveryEntry.ToString());
         }
