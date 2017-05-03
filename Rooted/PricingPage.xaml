@@ -47,7 +47,7 @@
             </Grid.ColumnDefinitions>
                 
                 <TextBlock HorizontalAlignment="Right" Grid.Column="0" Text="Enter Description:" FontSize="20"/>
-                <TextBox x:Name="PricingDescriptionBx" FontSize="20" Grid.Column="1" TextChanged="TextBox_TextChanged" Margin="0,0,10,0"/>
+            <TextBox x:Name="PricingDescriptionBx" TextWrapping="Wrap" AcceptsReturn="True" FontSize="20" Grid.Column="1" TextChanged="TextBox_TextChanged" Margin="0,0,10,0"/>
             </Grid>
 
         

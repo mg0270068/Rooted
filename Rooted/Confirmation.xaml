@@ -102,16 +102,6 @@
             <TextBlock x:Name="ConfirmDelZipOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
         </Grid>
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock x:Name="ConfirmDelDeceasedTx" Text="Deceased:" FontSize="20" Grid.Column="2"/>
-            <TextBlock x:Name="ConfirmDelDeaceasedOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
-        </Grid>
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -124,6 +114,17 @@
             <TextBlock x:Name="ConfirmOrdDescriptionOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
             <TextBlock x:Name="ConfirmDelInstructionsTx" Text="Delivery Insrtructions:" FontSize="20" Grid.Column="2"/>
             <TextBlock x:Name="ConfirmDelInstructionsOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
+        </Grid>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmDelDeceasedTx" Text="Deceased:" FontSize="20" Grid.Column="2"/>
+            <TextBlock x:Name="ConfirmDelDeaceasedOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
         </Grid>
         <Grid>
             <Grid.ColumnDefinitions>

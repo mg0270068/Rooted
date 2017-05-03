@@ -138,11 +138,11 @@
 
             <Grid Margin="0,20,0,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1.5*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="SameAsBillingBtn" Width="150" Content="Same as Billing" HorizontalAlignment="Left" FontSize="20" Grid.Column="0" Margin="10,0,0,0" Click="SameAsBillingBtn_Click"/>
+                <Button x:Name="SameAsBillingBtn" Width="200" Content="Same as Billing" HorizontalAlignment="Left" FontSize="25" Grid.Column="0" Margin="10,0,0,0" Click="SameAsBillingBtn_Click"/>
                 <CheckBox x:Name="DeliveryDeceasedBx" Grid.Column="1" Content="Deceased" FontSize="10" Checked="DeliveryDeceasedBx_Checked">
                     <CheckBox.LayoutTransform>
                         <ScaleTransform ScaleX="2" ScaleY="2"/>
