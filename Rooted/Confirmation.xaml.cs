@@ -31,6 +31,15 @@ namespace Rooted
         {
             Uri uri = new Uri("BlankHomePage.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
+
+            PrintDialog prtDlg = new PrintDialog();
+            if (prtDlg.ShowDialog() == true)
+            {
+
+                StackPanelConfirmation.Background = new SolidColorBrush(Colors.White);
+                prtDlg.PrintVisual(StackPanelConfirmation, "Hazel's Flowers Sales Quote:"); // The Name you call the Window in the XAML file  
+
+            }
         }
     }
 }

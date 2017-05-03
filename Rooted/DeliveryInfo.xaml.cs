@@ -28,16 +28,6 @@ namespace Rooted
         public DeliveryInfo()
         {
             InitializeComponent();
-            deliveryEntry = ((App)Application.Current).GetEntry();
-
-            //populate field with data
-            DeliveryFirstNameBx.Text = deliveryEntry.FirstName;
-            DeliveryLastNameBx.Text = deliveryEntry.LastName;
-            DeliveryStreetAddressBx.Text = deliveryEntry.Address;
-            DeliveryCityBx.Text = deliveryEntry.City;
-            DeliveryStateDropDown.Text = deliveryEntry.State;
-            DeliveryZipBx.Text = deliveryEntry.Zip;
-            
         }
 
 
@@ -48,12 +38,27 @@ namespace Rooted
             this.NavigationService.Navigate(uri);
 
             //test output
-            Console.WriteLine(deliveryEntry.ToString());
+
+           // Console.WriteLine(deliveryEntry.ToString());
         }
 
         private void DeliveryDeceasedBx_Checked(object sender, RoutedEventArgs e)
         {
             deliveryEntry.IsDeceased = true;
         }
+
+        private void SameAsBillingBtn_Click(object sender, RoutedEventArgs e)
+        {
+            deliveryEntry = ((App)Application.Current).GetEntry();
+
+            //populate field with data
+            DeliveryStreetAddressBx.Text = deliveryEntry.Address;
+            DeliveryPhoneNumberBx.Text = deliveryEntry.PhoneNumber;
+            DeliveryCityBx.Text = deliveryEntry.City;
+            DeliveryStateDropDown.Text = deliveryEntry.State;
+            DeliveryZipBx.Text = deliveryEntry.Zip;
+
+        }
     }
 }
+

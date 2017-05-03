@@ -4,12 +4,12 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Rooted"
-      mc:Ignorable="d" d:DesignWidth="1800"
-      Title="SalesQuote" Height="1247.2">
+      mc:Ignorable="d" d:DesignWidth="800" 
+      Title="SalesQuote">
 
 
-    <Border Margin="0,10,0,602" BorderBrush="Black" BorderThickness="5">
-        <StackPanel Background="#eee" Margin="0,0,0,5">
+    
+        <StackPanel x:Name="StackPanelQuote" Margin="0,5,0,0" Background="#eee">
 
             <Grid>
                 <TextBlock Text="Enter Sales Quote:" Margin="10 30 0 0" FontSize="30"/>
@@ -17,23 +17,8 @@
 
 
 
-            <Grid Margin="0 0 0 50">
+            <Grid Margin="0 0 0 30">
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="342*"/>
-                    <ColumnDefinition Width="261*"/>
-                    <ColumnDefinition Width="80*"/>
-                    <ColumnDefinition Width="342*"/>
-                    <ColumnDefinition Width="341*"/>
-                </Grid.ColumnDefinitions>
-
-                <TextBlock Margin="10,30,251,0" Text="First Name:" Grid.Column="0" FontSize="20" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="SalesQFirstNameBx" Margin="117,30,25,0" FontSize="20"/>
-                <TextBlock Margin="234,30,10,0" Text="Last Name:" Grid.Column="1" FontSize="20" RenderTransformOrigin="1.164,0.519"/>
-                <TextBox x:Name="SalesQLastNameBx" Margin="341,30,254,0" Grid.Column="1" Grid.ColumnSpan="3" FontSize="20"/>
-            </Grid>
-
-            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -41,23 +26,44 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
+                <TextBlock Text="First Name:" HorizontalAlignment="Right" Grid.Column="0" FontSize="20"/>
+                <TextBox x:Name="SalesQFirstNameBx" Grid.Column="1" FontSize="20" Margin="0,0,0,10"/>
+                <TextBlock Text="Last Name:" HorizontalAlignment="Right" Grid.Column="2" FontSize="20"/>
+                <TextBox x:Name="SalesQLastNameBx" Grid.Column="3"  FontSize="20" Margin="0,0,10,10"/>
+            </Grid>
 
-                <TextBlock Text="Enter Customer Phone Number:" FontSize="20" Margin="10,0,65,0" Grid.Column="0"/>
-                <TextBox x:Name="SalesQPhoneBx" Margin="300,-3,270,3" Height="28" FontSize="20" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2"/>
-                <TextBlock Text="Enter Price:" FontSize="20" Margin="233,-1,329,1" Grid.Column="1" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="SalesQInitialPriceBx" Margin="341,-3,343,3" Height="28" FontSize="20" TextChanged="TextBox_TextChanged" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Grid Margin="0,0,0,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <TextBlock Text="Phone Number:" HorizontalAlignment="Right" FontSize="20" Grid.Column="0"/>
+                <TextBox x:Name="SalesQPhoneBx" Height="28" Grid.Column="1" FontSize="20" TextChanged="TextBox_TextChanged"/>
+                <TextBlock Text="Enter Price:" HorizontalAlignment="Right" FontSize="20" Grid.Column="2"/>
+                <TextBox x:Name="SalesQInitialPriceBx" Height="28" FontSize="20" TextChanged="TextBox_TextChanged" Grid.Column="3" Margin="0,0,10,0"/>
             </Grid>
 
             <Grid>
-                <TextBlock Text="Description:" FontSize="20" Margin="10,82,-10,-82"/>
-                <TextBox x:Name="SalesQDescriptionBx" Margin="10,115,290,-277" FontSize="20" TextChanged="TextBox_TextChanged"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Description:" HorizontalAlignment="Right" FontSize="20" Grid.Column="0"/>
+                <TextBox x:Name="SalesQDescriptionBx" TextWrapping="Wrap" AcceptsReturn="True" FontSize="20" Grid.Column="1" TextChanged="TextBox_TextChanged" Margin="0,0,10,0"/>
             </Grid>
 
-            <Grid>
-                <Button Width="150" Content="Submit" FontSize="25" Margin="1594,298,46,0" Click="Button_Click"/>
+            <Grid Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Width="150" HorizontalAlignment="Right" Content="Submit" FontSize="25" Click="Button_Click" Margin="0,0,50,0"/>
             </Grid>
 
         </StackPanel>
 
-    </Border>
+
 </Page>

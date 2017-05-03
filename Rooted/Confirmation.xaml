@@ -5,151 +5,163 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Rooted"
       mc:Ignorable="d" 
-      d:DesignHeight="1247.2" d:DesignWidth="1500"
+      d:DesignWidth="800"
       Title="Confirmation">
 
-    <Border Margin="0,10,0,350" BorderBrush="Black" BorderThickness="5">
-        <StackPanel Background="#eee" Margin="0,0,0,5">
+
+    <StackPanel x:Name="StackPanelConfirmation" Background="#eee" Margin="0,5,0,0">
 
 
-            <!-- Each row to display customer information on the confirmation page -->
+        <!-- Each row to display customer information on the confirmation page -->
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Confirm Order" FontSize="35" Margin="0,0,0,15"/>
-            </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Confirm Order" FontSize="35"/>
+        </Grid>
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="1.5*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Customer Information:" FontSize="25" Margin="0,0,0,10"/>
-                <TextBlock Grid.Column="1" Text="Delivery Information:" FontSize="25" Margin="0,0,0,10"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmOrdFirstNameTx" Text="First Name:" FontSize="20" Grid.Column="0" Margin="0,0,0,10"/>
-                <TextBlock x:Name="ConfirmOrdFristNameOutTx" Text=" 1 " FontSize="20" Grid.ColumnSpan="2" Margin="214,0,159,0"/>
-                <TextBlock x:Name="ConfirmDelFirstNameTx" Text="First Name:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="224,0,149,0"/>
-                <TextBlock x:Name="ConfirmDelFristNameOutTx" Text=" 1 " FontSize="20" Grid.ColumnSpan="2" Grid.Column="2" Margin="53,2,-425,-2"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmOrdLastNameTx" Text="Last Name:" FontSize="20" Grid.Column="0" Margin="0,0,0,10"/>
-                <TextBlock x:Name="ConfirmOrdLastNameOutTx" Text=" 1 " FontSize="20" Margin="214,0,202,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
-                <TextBlock x:Name="ConfirmDelLastNameTx" Text="Last Name:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="223,0,150,0"/>
-                <TextBlock x:Name="ConfirmDelLastNameOutTx" Text=" 1 " FontSize="20" Grid.Column="2" Grid.ColumnSpan="2" Margin="54,0,318,0"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmOrdAddressTx" Text="Customer Address:" FontSize="20" Grid.Column="0" Margin="0,0,0,10"/>
-                <TextBlock x:Name="ConfirmOrdAddressOutTx" Text=" 1 " FontSize="20" Margin="214,0,202,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
-                <TextBlock x:Name="ConfirmDelAddressTx" Text="Delivery Address:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="223,0,150,0"/>
-                <TextBlock x:Name="ConfirmDelAddressOutTx" Text=" 1 " FontSize="20" Grid.Column="2" Grid.ColumnSpan="2" Margin="54,0,318,0"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmOrdCityTx" Text="City:" FontSize="20" Grid.Column="0" Margin="0,0,0,10"/>
-                <TextBlock x:Name="ConfirmOrdCityOutTx" Text=" 1 " FontSize="20" Margin="214,0,202,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
-                <TextBlock x:Name="ConfirmDelCityTx" Text="Delivery City:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="223,0,150,0"/>
-                <TextBlock x:Name="ConfirmDelCityOutTx" Text=" 1 " FontSize="20" Grid.Column="2" Grid.ColumnSpan="2" Margin="54,0,318,0"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmOrdStateTx" Text="State:" FontSize="20" Grid.Column="0" Margin="0,0,0,10"/>
-                <TextBlock x:Name="ConfirmOrdStateOutTx" Text=" 1 " FontSize="20" Margin="214,0,202,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
-                <TextBlock x:Name="ConfirmDelStateTx" Text="State:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="223,0,150,0"/>
-                <TextBlock x:Name="ConfirmDelStateOutTx" Text=" 1 " FontSize="20" Grid.Column="2" Grid.ColumnSpan="2" Margin="54,0,318,0"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmOrdZipTx" Text="ZIP Code:" FontSize="20" Grid.Column="0" Margin="0,0,0,10"/>
-                <TextBlock x:Name="ConfirmOrdZipOutTx" Text=" 1 " FontSize="20" Margin="214,0,202,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
-                <TextBlock x:Name="ConfirmDelZipTx" Text="Delivery ZIP Code:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="223,0,150,0"/>
-                <TextBlock x:Name="ConfirmDelZipOutTx" Text=" 1 " FontSize="20" Grid.Column="2" Grid.ColumnSpan="2" Margin="54,0,318,0"/>
-            </Grid>
-            
-            <Grid>
-                <TextBlock x:Name="ConfirmDelDeceasedTx" Text="Deceased:" FontSize="20" Margin="594,-4,784,4"/>
-                <TextBlock x:Name="ConfirmDelDeaceasedOutTx" Text=" 1 " FontSize="20" Margin="799,-4,594,4"/>
-            </Grid>
-            
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmOrdDescriptionTx" Text="Description:" FontSize="20" Grid.Column="0" Margin="0,0,0,10"/>
-                <TextBlock x:Name="ConfirmOrdDescriptionOutTx" Text=" 1 " FontSize="20" Margin="214,0,202,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Padding="0,0,0,70"/>
-                <TextBlock x:Name="ConfirmDelInstructionsTx" Text="Delivery Insrtructions:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="223,0,150,0"/>
-                <TextBlock x:Name="ConfirmDelInstructionsOutTx" Text=" 1 " FontSize="20" Grid.Column="2" Grid.ColumnSpan="2" Margin="54,0,318,0" Padding="0,0,0,70"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="6*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmPriceTx" Text="Price:" FontSize="20" Grid.Column="0" Margin="0,2,0,-2"/>
-                <TextBlock x:Name="ConfirmPriceOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="6*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmTaxTx" Text="Tax: " FontSize="20" Grid.Column="0" Margin="0,2,0,-2"/>
-                <TextBlock x:Name="ConfirmTaxOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="6*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="ConfirmGrandTotalTx" Text="Grand Total:" FontSize="20" Grid.Column="0"/>
-                <TextBlock x:Name="ConfirmGrandTotalOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button x:Name="ConfirmSubmitBtn" Width="200" Content="Submit Order" FontSize="25" Margin="1412,16,-122,284" Click="Button_Click" RenderTransformOrigin="0.5,-2.351"/>
-            </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Customer Information:" FontSize="25"/>
+            <TextBlock Grid.Column="1" Text="Delivery Information:" FontSize="25"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmOrdFirstNameTx" Text="First Name:" FontSize="20" Grid.Column="0"/>
+            <TextBlock x:Name="ConfirmOrdFristNameOutTx" Text=" 1 " Grid.Column="1" FontSize="20"/>
+            <TextBlock x:Name="ConfirmDelFirstNameTx" Text="First Name:" FontSize="20" Grid.Column="2"/>
+            <TextBlock x:Name="ConfirmDelFristNameOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmOrdLastNameTx" Text="Last Name:" FontSize="20" Grid.Column="0"/>
+            <TextBlock x:Name="ConfirmOrdLastNameOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Name="ConfirmDelLastNameTx" Text="Last Name:" FontSize="20" Grid.Column="2"/>
+            <TextBlock x:Name="ConfirmDelLastNameOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmOrdAddressTx" Text="Customer Address:" FontSize="20" Grid.Column="0"/>
+            <TextBlock x:Name="ConfirmOrdAddressOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Name="ConfirmDelAddressTx" Text="Delivery Address:" FontSize="20" Grid.Column="2"/>
+            <TextBlock x:Name="ConfirmDelAddressOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmOrdCityTx" Text="City:" FontSize="20" Grid.Column="0"/>
+            <TextBlock x:Name="ConfirmOrdCityOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Name="ConfirmDelCityTx" Text="Delivery City:" FontSize="20" Grid.Column="2"/>
+            <TextBlock x:Name="ConfirmDelCityOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmOrdStateTx" Text="State:" FontSize="20" Grid.Column="0"/>
+            <TextBlock x:Name="ConfirmOrdStateOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Name="ConfirmDelStateTx" Text="State:" FontSize="20" Grid.Column="2"/>
+            <TextBlock x:Name="ConfirmDelStateOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmOrdZipTx" Text="ZIP Code:" FontSize="20" Grid.Column="0"/>
+            <TextBlock x:Name="ConfirmOrdZipOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Name="ConfirmDelZipTx" Text="Delivery ZIP Code:" FontSize="20" Grid.Column="2"/>
+            <TextBlock x:Name="ConfirmDelZipOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
+        </Grid>
 
-        </StackPanel>
-    </Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmDelDeceasedTx" Text="Deceased:" FontSize="20" Grid.Column="2"/>
+            <TextBlock x:Name="ConfirmDelDeaceasedOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmOrdDescriptionTx" Text="Description:" FontSize="20" Grid.Column="0"/>
+            <TextBlock x:Name="ConfirmOrdDescriptionOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Name="ConfirmDelInstructionsTx" Text="Delivery Insrtructions:" FontSize="20" Grid.Column="2"/>
+            <TextBlock x:Name="ConfirmDelInstructionsOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmPriceTx" Text="Price:" FontSize="20" Grid.Column="0"/>
+            <TextBlock x:Name="ConfirmPriceOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmTaxTx" Text="Tax: " FontSize="20" Grid.Column="0"/>
+            <TextBlock x:Name="ConfirmTaxOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ConfirmGrandTotalTx" Text="Grand Total:" FontSize="20" Grid.Column="0"/>
+            <TextBlock x:Name="ConfirmGrandTotalOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ConfirmSubmitBtn" Width="180" HorizontalAlignment="Right" Content="Submit Order" FontSize="25" Click="Button_Click" Margin="0,0,10,0"/>
+        </Grid>
+
+    </StackPanel>
+
 </Page>

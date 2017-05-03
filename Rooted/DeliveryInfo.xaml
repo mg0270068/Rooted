@@ -5,45 +5,47 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Rooted"
       mc:Ignorable="d" 
-      d:DesignHeight="1247.2" d:DesignWidth="1500"
+       d:DesignWidth="800"
       Title="DeliveryInfo">
-    <Border Margin="0,10,0,350" BorderBrush="Black" BorderThickness="5">
-        <StackPanel Background="#eee" Margin="0,0,0,5">
+    
+        <StackPanel Margin="0,5,0,0" Background="#eee" Height="431">
             <Grid>
                 <TextBlock Text="Enter Delivery Order Information:" Margin="10 30 0 0" FontSize="30"/>
             </Grid>
 
 
-            <Grid Margin="0 0 0 50">
+            <Grid Margin="0,0,0,30">
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="342*"/>
-                    <ColumnDefinition Width="261*"/>
-                    <ColumnDefinition Width="80*"/>
-                    <ColumnDefinition Width="342*"/>
-                    <ColumnDefinition Width="341*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Margin="10,30,251,0" Text="First Name:" Grid.Column="0" FontSize="20" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="DeliveryFirstNameBx" Margin="120,30,22,0" FontSize="20" Height="29" VerticalAlignment="Top" x:FieldModifier="public"/>
-                <TextBlock Margin="234,30,0,0" Text="Last Name:" Grid.Column="1" FontSize="20" RenderTransformOrigin="1.164,0.519" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="DeliveryLastNameBx" Margin="59,30,194,0" Grid.Column="2" FontSize="20" Height="29" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <TextBlock Text="First Name:" HorizontalAlignment="Right" Grid.Column="0" FontSize="20"/>
+                <TextBox x:Name="DeliveryFirstNameBx" Grid.Column="1" FontSize="20" Height="29"/>
+                <TextBlock Text="Last Name:" HorizontalAlignment="Right" Grid.Column="2" FontSize="20"/>
+                <TextBox x:Name="DeliveryLastNameBx" Grid.Column="3" FontSize="20" Height="29" Margin="0,0,10,0"/>
             </Grid>
 
-            <Grid>
+            <Grid Margin="0 0 0 30">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Enter Customer Street Address:" FontSize="20" Margin="10,0,86,0"/>
-                <TextBox x:Name="DeliveryStreetAddressBx" Margin="294,0,140,0" Height="28" FontSize="20" Grid.ColumnSpan="2"/>
+                <TextBlock Text="Street Address:" HorizontalAlignment="Right" Grid.Column="0" FontSize="20"/>
+                <TextBox x:Name="DeliveryStreetAddressBx" Grid.Column="1" FontSize="20"/>
+                <TextBlock Text="Phone Number:" HorizontalAlignment="Right" FontSize="20" Grid.Column="2"/>
+                <TextBox x:Name="DeliveryPhoneNumberBx" FontSize="20" Grid.Column="3" Margin="0,0,10,0"/>
             </Grid>
-            <Grid Margin="0 50 0 0">
+
+
+            <Grid Margin="0,0,0,30">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1.67*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -53,14 +55,14 @@
 
 
 
-                <TextBlock Text="City:" FontSize="20" Grid.Column="0" Margin="10,0,0,0"/>
-                <TextBox x:Name="DeliveryCityBx" Margin="0,0,46,0" FontSize="20" HorizontalAlignment="Right" Width="108"/>
-                <TextBlock Text="State:" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Margin="5,0,336,0"/>
+                <TextBlock Text="City:" HorizontalAlignment="Right" FontSize="20" Grid.Column="0"/>
+                <TextBox x:Name="DeliveryCityBx" Grid.Column="1" FontSize="20"/>
+                <TextBlock Text="State:" HorizontalAlignment="Right" FontSize="20" Grid.Column="2"/>
 
 
-                <TextBlock Text="Zip Code:" FontSize="20" Grid.Column="2" Margin="162,4,179,-4" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="DeliveryZipBx" Grid.Column="3" Margin="44,0,66,0" FontSize="20"/>
-                <ComboBox x:Name="DeliveryStateDropDown" FontSize="20" Grid.ColumnSpan="2" Margin="65,0,220,0" Grid.Column="1">
+                <TextBlock Text="Zip Code:" HorizontalAlignment="Right" FontSize="20" Grid.Column="4"/>
+                <TextBox x:Name="DeliveryZipBx" Grid.Column="5" FontSize="20" Margin="0,0,10,0"/>
+                <ComboBox x:Name="DeliveryStateDropDown" FontSize="20" Grid.Column="3">
 
                     <!-- State Drop down box.-->
 
@@ -117,33 +119,42 @@
                 </ComboBox>
 
 
-                <CheckBox x:Name="DeliveryDeceasedBx" Margin="98,4,184,-4" Grid.Column="4" Content="Deceased" FontSize="10" Grid.ColumnSpan="2" Checked="DeliveryDeceasedBx_Checked">
+              <!--  <CheckBox x:Name="DeliveryDeceasedBx" Grid.Column="2" Content="Deceased" FontSize="10" Checked="DeliveryDeceasedBx_Checked">
                     <CheckBox.LayoutTransform>
                         <ScaleTransform ScaleX="2" ScaleY="2"/>
                     </CheckBox.LayoutTransform>
                 </CheckBox>
-
+-->
             </Grid>
 
-            <Grid Margin="0,0,0,80">
-                <TextBlock Text="Delivery Instructions:" FontSize="20" Padding="0,20,0,0" Margin="10,0,-10,0"/>
-                <TextBox x:Name="PricingDescriptionBx" Margin="205,28,647,-78" FontSize="20"/>
-            </Grid>
-
-            <Grid>
-                <Button x:Name="SameAsBillingBtn" Width="150" Content="Same as Billing" HorizontalAlignment="Left" FontSize="20" Margin="10,0,0,0"/>
-            </Grid>
-
-            <Grid>
-
+            <Grid Margin="0,0,0,30">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-                <Button Width="150" Content="Next" FontSize="25" Margin="1444,196,-104,104" Click="Button_Click"/>
+                <TextBlock Text="Delivery Instructions:" HorizontalAlignment="Right" Grid.Column="0" FontSize="20"/>
+                <TextBox x:Name="DeliveryInstructionsBx" TextWrapping="Wrap" AcceptsReturn="True" Grid.Column="1" FontSize="20" Margin="0,0,10,0"/>
             </Grid>
+
+            <Grid Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="SameAsBillingBtn" Width="150" Content="Same as Billing" HorizontalAlignment="Left" FontSize="20" Grid.Column="0" Margin="10,0,0,0" Click="SameAsBillingBtn_Click"/>
+                <CheckBox x:Name="DeliveryDeceasedBx" Grid.Column="1" Content="Deceased" FontSize="10" Checked="DeliveryDeceasedBx_Checked">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+                <Button Width="150" Content="Next" HorizontalAlignment="Right" FontSize="25" Grid.Column="2" Click="Button_Click" Margin="0,0,10,0"/>
+            </Grid>
+
+
 
 
             <Frame x:Name ="Main" Content="" Height="1" NavigationUIVisibility="Hidden"/>
         </StackPanel>
-    </Border>
+    
 </Page>

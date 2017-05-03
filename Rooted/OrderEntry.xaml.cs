@@ -37,7 +37,7 @@ namespace Rooted
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            //will store the initial names and variables on the entry
+           //will store the initial names and variables on the entry
             try
             {
                 //TODO: add if statements to check for blank strings
@@ -71,6 +71,12 @@ namespace Rooted
         private void OrderLastNameBx_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("DeliveryInfo.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
         }
     }
 }
