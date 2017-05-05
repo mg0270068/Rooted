@@ -15,9 +15,23 @@ namespace Rooted
     {
         Entry initialEntry;
         Entry deliveryInfo;
+		string deliveryInstructions;
+		string pricingInstructions;
 
-        //receive and send from initialEntry
-        public Entry GetEntry()
+		public string DeliveryInstructions
+		{
+			get { return deliveryInstructions; }
+			set { deliveryInstructions = value; }
+		}
+
+		public string PricingInstructions
+		{
+			get { return pricingInstructions; }
+			set { pricingInstructions = value; }
+		}
+
+		//receive and send from initialEntry
+		public Entry GetEntry()
         {
             return initialEntry;
         }
@@ -32,5 +46,10 @@ namespace Rooted
         {
             deliveryInfo = entry;
         }
+
+		public Entry GetDeliveryInfo()
+		{
+			return deliveryInfo;
+		}
     }
 }

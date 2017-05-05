@@ -19,11 +19,65 @@ namespace Rooted
     /// Interaction logic for Confirmation.xaml
     /// </summary>
     public partial class Confirmation : Page
-    {
+	{
+		Entry saleEntry;
+		Entry deliveryEntry;
+		string deliveryInfoText;
+		string pricingInfoText;
+
         public Confirmation()
         {
             InitializeComponent();
-        }
+
+			try
+			{
+				//obtain classes
+				saleEntry = ((App)Application.Current).GetEntry();
+				deliveryEntry = ((App)Application.Current).GetDeliveryInfo();
+
+				//set text boxes
+
+				//descriptions
+				ConfirmDelInstructionsTx.Text = ((App)Application.Current).DeliveryInstructions;
+				ConfirmOrdDescriptionTx.Text = ((App)Application.Current).PricingInstructions;
+
+				//order
+				ConfirmOrdFirstNameTx.Text = saleEntry.FirstName;
+				ConfirmOrdLastNameTx.Text = saleEntry.LastName;
+				ConfirmOrdCityTx.Text = saleEntry.City;
+				ConfirmOrdAddressTx.Text = saleEntry.Address;
+				ConfirmOrdStateTx.Text = saleEntry.State;
+				ConfirmOrdZipTx.Text = saleEntry.Zip;
+
+				//delivery
+				ConfirmDelFirstNameTx.Text = deliveryEntry.FirstName;
+				ConfirmDelLastNameTx.Text = deliveryEntry.LastName;
+				ConfirmDelAddressTx.Text = deliveryEntry.Address;
+				ConfirmDelCityTx.Text = deliveryEntry.City;
+				ConfirmDelStateTx.Text = deliveryEntry.State;
+				ConfirmDelZipTx.Text = deliveryEntry.Zip;
+
+				//check for deceased
+				if (deliveryEntry.IsDeceased == true)
+				{
+					ConfirmDelDeceasedTx.Text = "Yes";
+				}
+				else if (deliveryEntry.IsDeceased == false)
+				{
+					ConfirmDelDeceasedTx.Text = "No";
+				}
+
+				//price
+					ConfirmPriceTx.Text = Convert.ToString(saleEntry.InitialSale);
+				ConfirmTaxTx.Text = Convert.ToString(saleEntry.Tax);
+				ConfirmGrandTotalTx.Text = Convert.ToString(saleEntry.FinalSale);
+			}
+			catch (Exception ex)
+			{
+				Console.Write("Error: " + ex);
+			}
+
+		}
 
 
         // confirmation submit button also goes to home page

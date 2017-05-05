@@ -20,6 +20,8 @@ namespace Rooted
     /// </summary>
     public partial class PricingPage : Page
     {
+		Entry pricingEntry;
+
         public PricingPage()
         {
             InitializeComponent();
@@ -35,6 +37,15 @@ namespace Rooted
         {
             Uri uri = new Uri("Confirmation.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
+
+			//get initialentry
+			pricingEntry = ((App)Application.Current).GetEntry();
+
+			//populate initialentry with new data
+			pricingEntry.InitialSale = Convert.ToDouble(PricingPriceBx.Text);
+			pricingEntry.Tax = Convert.ToDouble(TaxPriceBx.Text);
+			pricingEntry.FinalSale = pricingEntry.Tax + pricingEntry.InitialSale;
+
         }
     }
 }

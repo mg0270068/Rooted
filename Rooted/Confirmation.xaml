@@ -112,7 +112,7 @@
             </Grid.ColumnDefinitions>
             <TextBlock x:Name="ConfirmOrdDescriptionTx" Text="Description:" FontSize="20" Grid.Column="0"/>
             <TextBlock x:Name="ConfirmOrdDescriptionOutTx" Text=" 1 " FontSize="20" Grid.Column="1"/>
-            <TextBlock x:Name="ConfirmDelInstructionsTx" Text="Delivery Insrtructions:" FontSize="20" Grid.Column="2"/>
+            <TextBlock x:Name="ConfirmDelInstructionsTx" Text="Delivery Instructions:" FontSize="20" Grid.Column="2"/>
             <TextBlock x:Name="ConfirmDelInstructionsOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
         </Grid>
         

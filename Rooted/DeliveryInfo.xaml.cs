@@ -37,7 +37,30 @@ namespace Rooted
             Uri uri = new Uri("PricingPage.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
 
-            //test output
+			//populate entry with text data from textboxes
+			try
+			{
+				//TODO: full validation check
+				//if ()
+				//{
+				deliveryEntry.FirstName = DeliveryFirstNameBx.Text;
+				deliveryEntry.LastName = DeliveryLastNameBx.Text;
+				deliveryEntry.Address = DeliveryStreetAddressBx.Text;
+				deliveryEntry.PhoneNumber = DeliveryPhoneNumberBx.Text;
+				deliveryEntry.State = DeliveryStateDropDown.Text;
+				deliveryEntry.Zip = DeliveryZipBx.Text;
+				((App)Application.Current).DeliveryInstructions = DeliveryInstructionsBx.Text;
+
+				//send delivery info to deliveryinformation class
+				((App)Application.Current).SendDeliveryInfo(deliveryEntry);
+
+				//}
+
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("Error: " + ex);
+			}
 
            // Console.WriteLine(deliveryEntry.ToString());
         }
