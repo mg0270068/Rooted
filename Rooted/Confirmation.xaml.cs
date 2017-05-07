@@ -38,39 +38,39 @@ namespace Rooted
 				//set text boxes
 
 				//descriptions
-				ConfirmDelInstructionsTx.Text = ((App)Application.Current).DeliveryInstructions;
-				ConfirmOrdDescriptionTx.Text = ((App)Application.Current).PricingInstructions;
+				ConfirmDelInstructionsOutTx.Text = ((App)Application.Current).DeliveryInstructions;
+				ConfirmOrdDescriptionOutTx.Text = ((App)Application.Current).PricingInstructions;
 
 				//order
-				ConfirmOrdFirstNameTx.Text = saleEntry.FirstName;
-				ConfirmOrdLastNameTx.Text = saleEntry.LastName;
-				ConfirmOrdCityTx.Text = saleEntry.City;
-				ConfirmOrdAddressTx.Text = saleEntry.Address;
-				ConfirmOrdStateTx.Text = saleEntry.State;
-				ConfirmOrdZipTx.Text = saleEntry.Zip;
+				ConfirmOrdFirstNameOutTx.Text = saleEntry.FirstName;
+				ConfirmOrdLastNameOutTx.Text = saleEntry.LastName;
+				ConfirmOrdCityOutTx.Text = saleEntry.City;
+				ConfirmOrdAddressOutTx.Text = saleEntry.Address;
+				ConfirmOrdStateOutTx.Text = saleEntry.State;
+				ConfirmOrdZipOutTx.Text = saleEntry.Zip;
 
 				//delivery
-				ConfirmDelFirstNameTx.Text = deliveryEntry.FirstName;
-				ConfirmDelLastNameTx.Text = deliveryEntry.LastName;
-				ConfirmDelAddressTx.Text = deliveryEntry.Address;
-				ConfirmDelCityTx.Text = deliveryEntry.City;
-				ConfirmDelStateTx.Text = deliveryEntry.State;
-				ConfirmDelZipTx.Text = deliveryEntry.Zip;
+				ConfirmDelFirstNameOutTx.Text = deliveryEntry.FirstName;
+				ConfirmDelLastNameOutTx.Text = deliveryEntry.LastName;
+				ConfirmDelAddressOutTx.Text = deliveryEntry.Address;
+				ConfirmDelCityOutTx.Text = deliveryEntry.City;
+				ConfirmDelStateOutTx.Text = deliveryEntry.State;
+				ConfirmDelZipOutTx.Text = deliveryEntry.Zip;
 
 				//check for deceased
 				if (deliveryEntry.IsDeceased == true)
 				{
-					ConfirmDelDeceasedTx.Text = "Yes";
+					ConfirmDelDeceasedOutTx.Text = "Yes";
 				}
 				else if (deliveryEntry.IsDeceased == false)
 				{
-					ConfirmDelDeceasedTx.Text = "No";
+					ConfirmDelDeceasedOutTx.Text = "No";
 				}
 
 				//price
-					ConfirmPriceTx.Text = Convert.ToString(saleEntry.InitialSale);
-				ConfirmTaxTx.Text = Convert.ToString(saleEntry.Tax);
-				ConfirmGrandTotalTx.Text = Convert.ToString(saleEntry.FinalSale);
+				ConfirmPriceOutTx.Text = Convert.ToString(saleEntry.InitialSale);
+				ConfirmTaxOutTx.Text = Convert.ToString(saleEntry.Tax);
+				ConfirmGrandTotalOutTx.Text = Convert.ToString(saleEntry.FinalSale);
 			}
 			catch (Exception ex)
 			{
