@@ -85,7 +85,8 @@ namespace Rooted
         {
             Uri uri = new Uri("BlankHomePage.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
-
+            
+            // Print box pops up to use as receipt or invoice
             PrintDialog prtDlg = new PrintDialog();
             if (prtDlg.ShowDialog() == true)
             {

@@ -40,7 +40,8 @@
             </Grid>
 			
 
-
+                <!-- This sets the frame for each page to show up below the home page buttons -->
+            <!-- Its the contatiner in which every page will fit-->
 			<Frame x:Name ="Main" Content="" Height="420" NavigationUIVisibility="Hidden"/>
 			
 

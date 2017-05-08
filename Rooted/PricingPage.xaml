@@ -33,6 +33,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
+            
+            <!-- Manually enter tax button -->
             <TextBlock Grid.Column="0" HorizontalAlignment="Right" Text="Enter Tax:" FontSize="20"/>
             <TextBox x:Name="TaxPriceBx" Grid.Column="1" FontSize="20" TextChanged="TextBox_TextChanged"/>
 
@@ -56,6 +58,8 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                
+                <!-- Next button that goes to the confirmation page -->
                 <Button HorizontalAlignment="Right" Width="150" x:Name="PricingNextBtn" Content="Next" FontSize="25"  Click="Button_Click"/>
             </Grid>
 

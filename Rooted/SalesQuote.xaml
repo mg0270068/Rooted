@@ -15,7 +15,7 @@
                 <TextBlock Text="Enter Sales Quote:" Margin="10 30 0 0" FontSize="30"/>
             </Grid>
 
-
+            <!-- Grids listed top down for sales quote entry -->
 
             <Grid Margin="0 0 0 30">
 
@@ -52,6 +52,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
+                
+                <!-- Sales quote description for customer needs -->
                 <TextBlock Text="Description:" HorizontalAlignment="Right" FontSize="20" Grid.Column="0"/>
                 <TextBox x:Name="SalesQDescriptionBx" TextWrapping="Wrap" AcceptsReturn="True" FontSize="20" Grid.Column="1" TextChanged="TextBox_TextChanged" Margin="0,0,10,0"/>
             </Grid>
@@ -60,6 +62,9 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                
+                <!-- Submit button that then pops up a print box so customer can 
+                return with sales quote to make final purchase -->
                 <Button Width="150" HorizontalAlignment="Right" Content="Submit" FontSize="25" Click="Button_Click" Margin="0,0,50,0"/>
             </Grid>
 

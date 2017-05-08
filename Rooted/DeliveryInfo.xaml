@@ -22,6 +22,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                
+                <!-- Delivery entry fields listed by grid-->
 
                 <TextBlock Text="First Name:" HorizontalAlignment="Right" Grid.Column="0" FontSize="20"/>
                 <TextBox x:Name="DeliveryFirstNameBx" Grid.Column="1" FontSize="20" Height="29"/>
@@ -142,18 +144,24 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                
+                <!--Same as billing button-->
                 <Button x:Name="SameAsBillingBtn" Width="200" Content="Same as Billing" HorizontalAlignment="Left" FontSize="25" Grid.Column="0" Margin="10,0,0,0" Click="SameAsBillingBtn_Click"/>
+                
+                <!--Deceased check box-->
                 <CheckBox x:Name="DeliveryDeceasedBx" Grid.Column="1" Content="Deceased" FontSize="10" Checked="DeliveryDeceasedBx_Checked">
                     <CheckBox.LayoutTransform>
                         <ScaleTransform ScaleX="2" ScaleY="2"/>
                     </CheckBox.LayoutTransform>
                 </CheckBox>
+                
+                <!--Next button-->
                 <Button Width="150" Content="Next" HorizontalAlignment="Right" FontSize="25" Grid.Column="2" Click="Button_Click" Margin="0,0,10,0"/>
             </Grid>
 
 
 
-
+           
             <Frame x:Name ="Main" Content="" Height="1" NavigationUIVisibility="Hidden"/>
         </StackPanel>
     

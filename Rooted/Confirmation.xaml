@@ -123,6 +123,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
+            <!-- This is the Deceased Text box-->
             <TextBlock x:Name="ConfirmDelDeceasedTx" Text="Deceased:" FontSize="20" Grid.Column="2"/>
             <TextBlock x:Name="ConfirmDelDeceasedOutTx" Text=" 1 " FontSize="20" Grid.Column="3"/>
         </Grid>
@@ -160,6 +162,8 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
+            <!--Confirm and submit order button-->
             <Button x:Name="ConfirmSubmitBtn" Width="180" HorizontalAlignment="Right" Content="Submit Order" FontSize="25" Click="Button_Click" Margin="0,0,10,0"/>
         </Grid>
 

@@ -6,6 +6,8 @@
       xmlns:local="clr-namespace:Rooted"
       mc:Ignorable="d" d:DesignWidth="1800"
       Title="BlankHomePage" Height="1247.2">
+    
+    <!-- This is used to go back to the home page and clear out whatever page you are on when you click home-->
 
     <Grid Background="White">
 

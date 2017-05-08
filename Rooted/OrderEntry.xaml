@@ -16,7 +16,7 @@
                 <TextBlock Text="Enter Customer Order Information:" Margin="10 30 0 0" FontSize="30"/>
             </Grid>
 
-
+            <!-- All the listed grids top down for order entry information-->
             <Grid Margin="0 0 0 30">
 
                 <Grid.ColumnDefinitions>
@@ -123,6 +123,8 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                
+                <!-- Next page button -->
                 <Button x:Name="NextBtn" Width="150" Content="Next" HorizontalAlignment="Right" FontSize="25"  Click="Button_Click" Margin="0,0,50,0" Height="37" VerticalAlignment="Bottom"/>
             </Grid>
             
