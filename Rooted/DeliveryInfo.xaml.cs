@@ -40,16 +40,12 @@ namespace Rooted
 			//populate entry with text data from textboxes
 			try
 			{
-				//TODO: full validation check
-				//if ()
-				//{
-				deliveryEntry.FirstName = DeliveryFirstNameBx.Text;
-				deliveryEntry.LastName = DeliveryLastNameBx.Text;
-				deliveryEntry.Address = DeliveryStreetAddressBx.Text;
-				deliveryEntry.PhoneNumber = DeliveryPhoneNumberBx.Text;
-				deliveryEntry.State = DeliveryStateDropDown.Text;
-				deliveryEntry.Zip = DeliveryZipBx.Text;
-				((App)Application.Current).DeliveryInstructions = DeliveryInstructionsBx.Text;
+                //TODO: full validation check
+                //if ()
+                //{
+                deliveryEntry = new Entry(DeliveryFirstNameBx.Text, DeliveryLastNameBx.Text, DeliveryStreetAddressBx.Text, DeliveryPhoneNumberBx.Text,
+                                            DeliveryCityBx.Text, DeliveryStateDropDown.Text, DeliveryZipBx.Text, Convert.ToBoolean(DeliveryDeceasedBx.IsChecked));
+                ((App)Application.Current).DeliveryInstructions = DeliveryInstructionsBx.Text;
 
 				//send delivery info to deliveryinformation class
 				((App)Application.Current).SendDeliveryInfo(deliveryEntry);
@@ -69,6 +65,7 @@ namespace Rooted
         {
             deliveryEntry.IsDeceased = true;
         }
+        
 
         private void SameAsBillingBtn_Click(object sender, RoutedEventArgs e)
         {
