@@ -8,16 +8,16 @@
         Title="Rooted" 
         Height="{Binding SystemParameters.PrimaryScreenHeight}" 
         Width="{Binding SystemParameters.PrimaryScreenWidth}">
-	
+
     <Border Padding="10">
 
         <StackPanel>
-		
-
-            <Grid>
 
 
-            <Image x:Name="Hazel_s_png" Height="300" Margin="0,0,0,0" Source="Hazel's.png"/>
+            <Grid Height="169">
+
+
+                <Image x:Name="Hazel_s_png" Margin="0,0,0,10" Source="Hazel's.png"/>
 
             </Grid>
 
@@ -28,28 +28,28 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
 
-				</Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>
 
                 <!-- Home, Order, Sales quote, Exit buttons below. -->
 
                 <Button Margin="10 0 0 0" Grid.Column="0" Content="Home" Click="Button_Click" FontSize="25"/>
-				<Button Margin="10 0 10 0" Grid.Column="1" Content="Order Entry" Click="OrderEntryClick" FontSize="25"/>
-				<Button Margin="0 0 10 0" Grid.Column="2" Content="Sales Quote" FontSize="25" Click="Button_Click_1"/>
-				<Button Margin="0 0 10 0" Grid.Column="3" Content="Exit" FontSize="25" Click="Button_Click_2"/>
+                <Button Margin="10 0 10 0" Grid.Column="1" Content="Order Entry" Click="OrderEntryClick" FontSize="25"/>
+                <Button Margin="0 0 10 0" Grid.Column="2" Content="Sales Quote" FontSize="25" Click="Button_Click_1"/>
+                <Button Margin="0 0 10 0" Grid.Column="3" Content="Exit" FontSize="25" Click="Button_Click_2"/>
 
             </Grid>
-			
 
-                <!-- This sets the frame for each page to show up below the home page buttons -->
+
+            <!-- This sets the frame for each page to show up below the home page buttons -->
             <!-- Its the contatiner in which every page will fit-->
-			<Frame x:Name ="Main" Content="" Height="420" NavigationUIVisibility="Hidden"/>
-			
+            <Frame x:Name ="Main" Content="" Height="420" NavigationUIVisibility="Hidden"/>
 
 
 
 
 
-		</StackPanel>
+
+        </StackPanel>
 
 
 
